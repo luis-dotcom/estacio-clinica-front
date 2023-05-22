@@ -4,6 +4,8 @@ import { Agenda } from '../agenda.modelo';
 import { AgendaService } from '../agenda.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Especialidade } from '../../especialidade/especialidade.modelo';
+import { Aluno } from '../../aluno/aluno.modelo';
+import { AlunoService } from '../../aluno/service.service';
 
 @Component({
   selector: 'app-agenda-update',
@@ -20,19 +22,22 @@ export class AgendaUpdateComponent {
     especialidade:"",
     nomeAluno: ""
   };
-  selects: Especialidade[] = [];
+
+  especialidades: Especialidade[] = [];
+  alunos: Aluno[] = [];
 
   constructor(
     private service: AgendaService,
     private router: Router,
     private serviceEsp: EspecialidadeService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private serviceAluno: AlunoService
   ) {}
 
   ngOnInit(): void {
     this.agenda.id = this.route.snapshot.paramMap.get("id")!;
     this.buscarPorId();
-    this.listarEspecialidade();
+    this.listarSelects();
   }
 
   public buscarPorId(): void {
@@ -55,9 +60,12 @@ export class AgendaUpdateComponent {
      })
   }
 
-  public listarEspecialidade() {
+  public listarSelects() {
     this.serviceEsp.listarEspecialidadesService().subscribe((resposta) => {
-      this.selects = resposta;
+      this.especialidades = resposta;
+    });
+    this.serviceAluno.listarAlunosService().subscribe((resposta) => {
+      this.alunos = resposta;
     });
   }
 

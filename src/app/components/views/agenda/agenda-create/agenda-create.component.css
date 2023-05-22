@@ -12,6 +12,11 @@ h2 {
   margin: 2rem;
 }
 
+form {
+  margin-left: 20rem;
+  width: 50%;
+}
+
 .buttons {
   width: 100%;
   text-align: start;

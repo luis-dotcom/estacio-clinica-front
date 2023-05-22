@@ -42,6 +42,15 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-form-field class="campo_menor">
+    <mat-label>Aluno</mat-label>
+    <mat-select [(ngModel)]="agenda.nomeAluno" name="select">
+      <mat-option *ngFor="let select of alunos" [value]="select.nome">
+        {{select.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
     <div class="buttons">
       <!-- Botao criar Categoria -->
       <button (click)="criarAgendamento()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>

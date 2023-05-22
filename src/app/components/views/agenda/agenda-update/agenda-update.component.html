@@ -35,19 +35,20 @@
 
     <mat-form-field class="campo_menor">
       <mat-label>Especialidade</mat-label>
-      <mat-select [(ngModel)]="agenda.especialidade" name="select">
-        <mat-option *ngFor="let select of selects" [value]="select.valor">
+      <mat-select [(ngModel)]="agenda.especialidade" name="especialidade">
+        <mat-option *ngFor="let select of especialidades" [value]="select.valor">
           {{select.verValor}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Nome Aluno </mat-label>
-      <input matInput [(ngModel)]="agenda.nomeAluno"
-      type="text"
-      name="nomeAluno"
-      placeholder=""/>
+      <mat-label>Aluno</mat-label>
+      <mat-select [(ngModel)]="agenda.nomeAluno" name="nomeAluno">
+        <mat-option *ngFor="let select of alunos" [value]="select.nome">
+          {{select.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
 
     <div class="buttons">

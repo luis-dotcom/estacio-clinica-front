@@ -1,9 +1,11 @@
+import { AlunoService } from './../../aluno/service.service';
 import { EspecialidadeService } from './../../especialidade/especialidade.service';
 import { Especialidade } from '../../especialidade/especialidade.modelo';
 import { Agenda } from './../agenda.modelo';
 import { AgendaService } from './../agenda.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Aluno } from '../../aluno/aluno.modelo';
 
 @Component({
   selector: 'app-agenda-create',
@@ -19,12 +21,19 @@ export class AgendaCreateComponent implements OnInit {
     especialidade: '',
     nomeAluno: '',
   };
-  selects: Especialidade[] = [];
 
- constructor(private service: AgendaService, private router: Router, private serviceEsp: EspecialidadeService) {}
+  selects: Especialidade[] = [];
+  alunos: Aluno[] = [];
+
+  constructor(
+    private service: AgendaService,
+    private router: Router,
+    private serviceEsp: EspecialidadeService,
+    private serviceAluno: AlunoService
+  ) {}
 
   ngOnInit(): void {
-    this.listarEspecialidade();
+    this.listarSelects();
   }
 
   public criarAgendamento(): void {
@@ -41,9 +50,12 @@ export class AgendaCreateComponent implements OnInit {
     );
   }
 
-  public listarEspecialidade() {
+  public listarSelects() {
     this.serviceEsp.listarEspecialidadesService().subscribe((resposta) => {
       this.selects = resposta;
+    });
+    this.serviceAluno.listarAlunosService().subscribe((resposta) => {
+      this.alunos = resposta;
     });
   }
 

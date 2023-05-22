@@ -1,0 +1,73 @@
+<app-header></app-header>
+<h1></h1>
+<form>
+  <h2>Apagar Aluno</h2>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Matrícula</mat-label>
+    <input matInput [(ngModel)]="aluno.matricula"
+    type="text"
+    name="matricula" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="aluno.nome"
+    type="text"
+    name="nome" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+  <mat-label>Cpf</mat-label>
+  <input matInput [(ngModel)]="aluno.cpf"
+  type="text"
+  name="cpf"
+  placeholder="Ex: 12345678901"/>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>Endereço</mat-label>
+  <input
+  matInput [(ngModel)]="aluno.endereco"
+  type="text"
+  name="endereco"/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Tipo Perfil</mat-label>
+  <input matInput [(ngModel)]="aluno.tipoPerfil"
+  type="text"
+  name="tipoPerfil"
+  placeholder=""/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Curso</mat-label>
+  <input matInput [(ngModel)]="aluno.curso"
+  type="text"
+  name="curso"
+  placeholder=""/>
+</mat-form-field>
+
+    <mat-form-field class="campo_maior">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [(ngModel)]="aluno.email"
+    type="email"
+    name="email"
+    placeholder="Ex: clinica@yahoo.com"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Senha</mat-label>
+    <input matInput [(ngModel)]="aluno.senha"
+    type="text"
+    name="senha"/>
+  </mat-form-field>
+
+
+  <div class="buttons">
+    <!-- Botao criar Categoria -->
+    <button (click)="deletarAluno()" class="mat-elevation-z8" mat-raised-button color="warn">Deletar</button>
+    <button (click)="navegarParaListaAlunos()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>

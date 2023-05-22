@@ -47,6 +47,11 @@ import { EspecialidadeCreateComponent } from './components/views/especialidade/e
 import { EspecialidadeDeleteComponent } from './components/views/especialidade/especialidade-delete/especialidade-delete.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
 
+import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
+import { AlunoDeleteComponent } from './components/views/aluno/aluno-delete/aluno-delete.component';
+import { AlunoUpdateComponent } from './components/views/aluno/aluno-update/aluno-update.component';
+import { AlunoReadComponent } from './components/views/aluno/aluno-read/aluno-read.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +76,10 @@ import { EspecialidadReadComponent } from './components/views/especialidade/espe
     EspecialidadeCreateComponent,
     EspecialidadeDeleteComponent,
     EspecialidadReadComponent,
+    AlunoCreateComponent,
+    AlunoDeleteComponent,
+    AlunoUpdateComponent,
+    AlunoReadComponent,
 
 
   ],
