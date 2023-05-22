@@ -1,0 +1,52 @@
+<mat-toolbar class="header">
+
+  <span>
+      <img src="assets/imagem/estacio.png" alt="">
+  </span>
+
+ <button class="menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon class="icone" >menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button routerLink="/home" mat-menu-item>
+      <mat-icon>home</mat-icon>
+      <span>HOME</span>
+    </button>
+    <button routerLink="/agenda" mat-menu-item>
+      <mat-icon>book</mat-icon>
+      <span>AGENDA</span>
+    </button>
+    <button routerLink="/clientes" mat-menu-item>
+      <mat-icon>group</mat-icon>
+      <span>PACIENTES</span>
+    </button>
+    <button routerLink="/fila" mat-menu-item>
+      <mat-icon>group_add</mat-icon>
+      <span>ORDEM CHEGADA</span>
+    </button>
+    <button routerLink="" mat-menu-item>
+      <mat-icon></mat-icon>
+      <span></span>
+    </button>
+    <button  mat-menu-item>
+      <mat-icon></mat-icon>
+      <span></span>
+    </button>
+    <button  mat-menu-item>
+      <mat-icon></mat-icon>
+      <span></span>
+    </button>
+    <button  mat-menu-item>
+      <mat-icon></mat-icon>
+      <span></span>
+    </button>
+    <button routerLink="/especialidade" mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>CONFIG. ESPECIALIDADE</span>
+    </button>
+    <button  routerLink="/login" mat-menu-item>
+      <mat-icon>exit_to_app</mat-icon>
+      <span>SAIR</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

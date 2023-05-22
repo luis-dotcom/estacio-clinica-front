@@ -1,0 +1,147 @@
+<app-header></app-header>
+<h1></h1>
+<form>
+  <form>
+    <button type="reset" (click)="navegarParaListaConsultas()" class="button" mat-stroked-button color="warn">
+      <mat-icon>keyboard_return</mat-icon>
+    </button>
+    <h1></h1>
+
+        <mat-form-field class="campo_maior">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="cliente.nome"
+            type="text"
+            name="nome" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Data de Nascimento</mat-label>
+            <input
+              type="date" matInput [(ngModel)]="cliente.dataNascimento"
+              name="dataNascimento" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Data Consulta</mat-label>
+            <input matInput [(ngModel)]="consulta.dataConsulta"
+             type="date"
+             name="dataConsulta" disabled />
+         </mat-form-field>
+
+          <mat-form-field class="campo_maior">
+            <mat-label>Endereço</mat-label>
+            <input
+              matInput [(ngModel)]="cliente.endereco"
+              type="text"
+              name="endereco" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Cidade</mat-label>
+            <input matInput [(ngModel)]="cliente.cidade"
+            type="text"
+            name="cidade" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Telefone</mat-label>
+            <input type="tel" matInput [(ngModel)]="cliente.telefone"
+              type="tel"
+              name="telefone" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_maior">
+            <mat-label>Nome da Mãe</mat-label>
+            <input matInput [(ngModel)]="cliente.nomeMae"
+            type="text"
+            name="nomeMae" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Cpf</mat-label>
+            <input matInput [(ngModel)]="cliente.cpf"
+            type="text"
+            name="cpf" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Naturalidade</mat-label>
+            <input matInput [(ngModel)]="cliente.naturalidade"
+              type="text"
+              name="naturalidade" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_maior">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput [(ngModel)]="cliente.email"
+              name="email" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Sexo</mat-label>
+            <input matInput [(ngModel)]="cliente.sexo"
+            type="text"
+            name="sexo" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_maior">
+            <mat-label>Nome Atendente</mat-label>
+            <input type="text" matInput [(ngModel)]="consulta.nomeAtendente"
+              name="nomeAtendente" disabled/>
+          </mat-form-field>
+
+          <mat-form-field class="campo_menor">
+            <mat-label>Matrícula</mat-label>
+            <input matInput [(ngModel)]="consulta.matricula"
+            type="text"
+            name="matricula" disabled/>
+          </mat-form-field>
+
+         <mat-form-field class="campo_textarea">
+            <mat-label>Queixas</mat-label>
+            <textarea matInput [(ngModel)]="consulta.queixas"
+              type="text"
+              name="queixas" disabled
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Plano</mat-label>
+            <textarea matInput [(ngModel)]="consulta.plano"
+              type="text"
+              name="plano" disabled
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Avaliação</mat-label>
+            <textarea matInput [(ngModel)]="consulta.avaliacao"
+              type="text"
+              name="avaliacao" disabled
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Exames</mat-label>
+            <textarea matInput [(ngModel)]="consulta.exames"
+              type="text"
+              name="queixas" disabled
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Encaminhamento</mat-label>
+            <textarea matInput [(ngModel)]="consulta.encaminhamento"
+              type="text"
+              name="encaminhamento" disabled></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="campo_textarea">
+            <mat-label>Observação</mat-label>
+            <textarea matInput [(ngModel)]="consulta.observacao"
+              type="textarea"
+              name="observacao" disabled></textarea>
+          </mat-form-field>
+     </form>
+
+  </form>

@@ -1,0 +1,26 @@
+.content {
+  width: 50%;
+  margin: 1.4rem auto auto auto;
+}
+
+.title h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.table {
+  margin-top: 2rem;
+}
+
+.delete {
+  color: red;
+  margin-left: 1rem;
+}

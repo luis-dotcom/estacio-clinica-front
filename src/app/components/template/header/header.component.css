@@ -1,0 +1,30 @@
+img {
+  height: 10rem;
+  width: 55rem;
+}
+
+.header {
+  justify-content: center;
+  height: 10%;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  right: 10px;
+}
+
+.material-icons {
+  color: rgba(0, 0, 252, 0.836);
+}
+
+.icone {
+color: black;
+}
+

@@ -1,0 +1,33 @@
+.content {
+  width: 50%;
+  margin: 1.4rem auto auto auto;
+}
+
+.title {
+  text-align: center;
+  margin-right: 5rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+.total {
+  margin-left: 20rem;
+  font-size: 1rem;
+
+}
+
+.btn1 {
+  color: rgb(8, 0, 0);
+  margin-top: 1rem;
+}
+

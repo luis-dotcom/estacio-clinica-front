@@ -1,0 +1,87 @@
+<app-header></app-header>
+<h1></h1>
+<form>
+  <h2>Novo Paciente</h2>
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome *</mat-label>
+    <input matInput [(ngModel)]="cliente.nome"
+    type="text"
+    name="nome" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Naturalidade *</mat-label>
+    <input matInput [(ngModel)]="cliente.naturalidade"
+    type="text"
+    name="naturalidade" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Data de Nascimento</mat-label>
+    <input
+      type="date" matInput [(ngModel)]="cliente.dataNascimento"
+      type="date"
+      name="dataNascimento"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Endereço *</mat-label>
+    <input
+      matInput [(ngModel)]="cliente.endereco"
+      type="text"
+      name="endereco"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Cidade *</mat-label>
+    <input matInput [(ngModel)]="cliente.cidade"
+    type="text"
+    name="cidade" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone *</mat-label>
+    <input type="tel" matInput [(ngModel)]="cliente.telefone"
+      type="tel"
+      name="telefone"
+      placeholder="Ex: 99 99999-9999"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome da Mãe *</mat-label>
+    <input matInput [(ngModel)]="cliente.nomeMae"
+    type="text"
+    name="nomeMae" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Cpf *</mat-label>
+    <input matInput [(ngModel)]="cliente.cpf"
+    type="text"
+    name="cpf"
+    placeholder="Ex: 12345678901"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Email *</mat-label>
+    <input type="email" matInput [(ngModel)]="cliente.email"
+      type="email"
+      name="email"
+      placeholder="Ex: clinica@yahoo.com"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Sexo *</mat-label>
+    <input matInput [(ngModel)]="cliente.sexo"
+    type="text"
+    name="sexo" />
+  </mat-form-field>
+
+
+  <div class="buttons">
+    <!-- Botao criar Categoria -->
+    <button (click)="criarCliente()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
+    <button (click)="navegarParaListaClientes()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+  </div>
+</form>
+

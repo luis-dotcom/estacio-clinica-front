@@ -1,0 +1,37 @@
+.content {
+    width: 80%;
+    margin: 1.4rem auto auto auto;
+}
+
+h2 {
+  margin: 2rem;
+}
+
+.nome{
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color:  black;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.total {
+    margin-left: 48rem;
+    font-size: 1rem;
+
+}
+
+.consultas {
+  color: rgba(196, 105, 31, 0.884);
+    margin-left: 1.5rem;
+}
+
+.delete {
+    color: rgb(253, 0, 0);
+    margin-left: .50rem;
+}
+
+.edit {
+    color: rgb(33, 36, 190);
+}

@@ -1,0 +1,39 @@
+img {
+  height: 10rem;
+  width: 25rem;
+}
+
+.conteudo-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+
+  .conteudo-form {
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0, 30px 60px 0 gray;
+    text-align: center;
+    width: 45%;
+    width: 350px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .conteudo-form :hover {
+    box-shadow: 0, 30px 60px 0 blue;
+  }
+}
+
+.input-login {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 0px;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px;
+  width: 90%;
+  border: 2px solid white;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px 5px 5px 5px;
+}
