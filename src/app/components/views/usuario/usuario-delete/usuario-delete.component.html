@@ -1,0 +1,66 @@
+<app-header></app-header>
+<h1></h1>
+<form>
+  <h2>Apagar Usuário</h2>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Matrícula</mat-label>
+    <input matInput [(ngModel)]="usuario.matricula"
+    type="text"
+    name="matricula" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="usuario.nome"
+    type="text"
+    name="nome" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+  <mat-label>Cpf</mat-label>
+  <input matInput [(ngModel)]="usuario.cpf"
+  type="text"
+  name="cpf"
+  placeholder="Ex: 12345678901"/>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>Endereço</mat-label>
+  <input
+  matInput [(ngModel)]="usuario.endereco"
+  type="text"
+  name="endereco"/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Tipo Perfil</mat-label>
+  <input matInput [(ngModel)]="usuario.tipoPerfil"
+  type="text"
+  name="tipoPerfil"
+  placeholder=""/>
+</mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="usuario.email"
+    type="email"
+    name="email"
+    placeholder="Ex: clinica@yahoo.com"/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Senha</mat-label>
+    <input matInput [(ngModel)]="usuario.senha"
+    type="text"
+    name="senha"/>
+  </mat-form-field>
+
+
+  <div class="buttons">
+    <!-- Botao criar Categoria -->
+    <button (click)="deletarUsuario()" class="mat-elevation-z8" mat-raised-button color="warn">Deletar</button>
+    <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>
+
