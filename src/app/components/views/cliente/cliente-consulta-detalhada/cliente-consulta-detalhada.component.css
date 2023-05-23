@@ -9,7 +9,7 @@
 }
 
 h1 {
-    
+
     margin: 2rem;
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -34,4 +34,27 @@ h1 {
 
 .button {
     margin-left: 2rem;
+}
+
+.botaoImprimir {
+  margin-left: 80%;
+  margin-right: 3px;
+}
+
+
+
+-- retirar botoes da impresao --
+.only-print{
+  display: none;
+}
+
+@media print{
+
+  .no-print{
+    display: none !important;
+  }
+
+  .only-print{
+    display: block;
+  }
 }

@@ -1,10 +1,11 @@
-<app-header></app-header>
 <h1></h1>
 <form>
   <form>
-    <button type="reset" (click)="navegarParaListaConsultas()" class="button" mat-stroked-button color="warn">
+    <button type="reset" (click)="navegarParaListaConsultas()" class="button no-print" mat-stroked-button color="warn">
       <mat-icon>keyboard_return</mat-icon>
     </button>
+
+    <button class="botaoImprimir no-print" onclick="window.print()" mat-fab extended color="primary"><mat-icon>download</mat-icon> Imprimir</button>
     <h1></h1>
 
         <mat-form-field class="campo_maior">
