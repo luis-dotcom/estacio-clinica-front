@@ -15,8 +15,13 @@ span {
 
 .menu {
   position: absolute;
-  width: 100px;
-  height: 90px;
+  margin-bottom: 0.2rem;
+  right: 10px;
+}
+
+.settings {
+  position: absolute;
+  margin-right: 50px;
   right: 10px;
 }
 
@@ -24,7 +29,10 @@ span {
   color: rgba(0, 0, 252, 0.836);
 }
 
-.icone {
-color: blue;
+.iconeMenu {
+  color: blue;
 }
 
+.iconeSetting{
+  color: black;
+}
