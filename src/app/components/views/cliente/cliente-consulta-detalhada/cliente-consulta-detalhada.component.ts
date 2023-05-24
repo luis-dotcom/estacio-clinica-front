@@ -84,6 +84,6 @@ export class ClienteConsultaDetalhadaComponent implements OnInit{
   }
 
   public navegarParaListaConsultas(): void {
-    this.router.navigate(["clientes/consulta/" + this.id_cliente + "/consultas"])
+    this.router.navigate(["clientes/" + this.id_cliente + "/consultas"])
   }
 }

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Cliente } from '../../cliente/cliente.modelo';
-import { ClienteService } from '../../cliente/cliente.service';
 import { Consulta } from '../consulta.modelo';
 import { ConsultaService } from '../consulta.service';
 
@@ -39,12 +37,12 @@ export class ConsultaCreateComponent implements OnInit{
   public criarConsulta(): void {
     this.service.criarConsultaService(this.id_cliente, this.consulta).subscribe(
       (resposta) => {
-        this.router.navigate(["clientes/consulta/" + this.id_cliente + "/consultas"]);
+        this.router.navigate(["clientes/" + this.id_cliente + "/consultas"]);
         this.service.mensagem("Consulta criada com sucesso!");
       })
   }
 
   public navegarParaListaConsultas(): void {
-    this.router.navigate(["clientes/consulta/" + this.id_cliente + "/consultas"]);
+    this.router.navigate(["clientes/" + this.id_cliente + "/consultas"]);
   }
 }

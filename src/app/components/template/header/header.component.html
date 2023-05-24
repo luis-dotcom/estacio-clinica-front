@@ -4,8 +4,25 @@
       <img src="assets/imagem/estacio.png" alt="">
   </span>
 
- <button class="menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon class="icone" >menu</mat-icon>
+<button class="settings" mat-icon-button [matMenuTriggerFor]="aboveMenu" aria-label="Example icon-button with a menu">
+  <mat-icon class="iconeSetting">settings</mat-icon></button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button routerLink="/alunos" mat-menu-item>
+    <mat-icon>school</mat-icon>
+    <span>CADASTRAR ALUNO</span>
+  </button>
+  <button routerLink="/usuarios" mat-menu-item>
+    <mat-icon>person</mat-icon>
+    <span>CADASTRAR USÚARIO</span>
+  </button>
+  <button routerLink="/especialidade" mat-menu-item>
+    <mat-icon>library_books</mat-icon>
+    <span>CAD. ESPECIALIDADE</span>
+  </button>
+</mat-menu>
+
+<button class="menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon class="iconeMenu" >menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
     <button routerLink="/home" mat-menu-item>
@@ -24,25 +41,17 @@
       <mat-icon>group_add</mat-icon>
       <span>ORDEM CHEGADA</span>
     </button>
-    <button routerLink="" mat-menu-item>
-      <mat-icon></mat-icon>
-      <span></span>
-    </button>
-    <button  mat-menu-item>
-      <mat-icon></mat-icon>
-      <span></span>
-    </button>
     <button routerLink="/alunos" mat-menu-item>
       <mat-icon>school</mat-icon>
       <span>CADASTRAR ALUNO</span>
     </button>
-    <button  mat-menu-item>
+    <button routerLink="/usuarios" mat-menu-item>
       <mat-icon>person</mat-icon>
       <span>CADASTRAR USÚARIO</span>
     </button>
     <button routerLink="/especialidade" mat-menu-item>
-      <mat-icon>settings</mat-icon>
-      <span>CONFIG. ESPECIALIDADE</span>
+      <mat-icon>library_books</mat-icon>
+      <span>CAD. ESPECIALIDADE</span>
     </button>
     <button  routerLink="/login" mat-menu-item>
       <mat-icon>exit_to_app</mat-icon>

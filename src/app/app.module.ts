@@ -51,6 +51,10 @@ import { AlunoCreateComponent } from './components/views/aluno/aluno-create/alun
 import { AlunoDeleteComponent } from './components/views/aluno/aluno-delete/aluno-delete.component';
 import { AlunoUpdateComponent } from './components/views/aluno/aluno-update/aluno-update.component';
 import { AlunoReadComponent } from './components/views/aluno/aluno-read/aluno-read.component';
+import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
+import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
+import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +84,10 @@ import { AlunoReadComponent } from './components/views/aluno/aluno-read/aluno-re
     AlunoDeleteComponent,
     AlunoUpdateComponent,
     AlunoReadComponent,
+    UsuarioReadComponent,
+    UsuarioCreateComponent,
+    UsuarioUpdateComponent,
+    UsuarioDeleteComponent,
 
 
   ],

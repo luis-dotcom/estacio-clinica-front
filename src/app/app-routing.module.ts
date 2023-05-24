@@ -23,6 +23,10 @@ import { AlunoReadComponent } from './components/views/aluno/aluno-read/aluno-re
 import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
 import { AlunoUpdateComponent } from './components/views/aluno/aluno-update/aluno-update.component';
 import { AlunoDeleteComponent } from './components/views/aluno/aluno-delete/aluno-delete.component';
+import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
+import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
+import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
+import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
 
 
 const routes: Routes = [
@@ -50,6 +54,10 @@ const routes: Routes = [
   { path: "alunos/create", component: AlunoCreateComponent },
   { path: "alunos/update/:id", component: AlunoUpdateComponent },
   { path: "alunos/delete/:id", component: AlunoDeleteComponent },
+  { path: "usuarios", component: UsuarioReadComponent },
+  { path: "usuarios/create", component: UsuarioCreateComponent },
+  { path: "usuarios/update/:id", component: UsuarioUpdateComponent },
+  { path: "usuarios/delete/:id", component: UsuarioDeleteComponent },
   { path: '**', component: LoginComponent }
 
 ];

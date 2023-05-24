@@ -1,0 +1,50 @@
+.content {
+  width: 80%;
+  margin: 1.4rem auto auto auto;
+}
+
+.mat-mdc-form-field {
+font-size: 14px;
+margin-left: 5rem;
+}
+
+.title {
+  text-align: center;
+  margin-right: 5rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgba(81, 81, 201, 0.986);
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+.total {
+  margin-left: 30rem;
+  font-size: 1rem;
+
+}
+.consultas {
+  color: rgba(196, 105, 31, 0.884);
+  margin-left: 1.5rem;
+}
+
+.agenda {
+color: green;
+}
+
+.delete {
+  color: rgb(253, 0, 0);
+  margin-left: .50rem;
+}
+
+.edit {
+  color: rgb(55, 11, 211);
+}

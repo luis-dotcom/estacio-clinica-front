@@ -1,26 +1,30 @@
 .campo_maior {
   text-align: center;
-  margin-left: 20rem;
-  margin-top: 2rem;
+  width: 50%;
+  margin-left: 2rem;
 }
 
 .campo_menor {
   margin-left: 2rem;
 }
 
+h2 {
+margin: 2rem;
+}
+
+form {
+  margin-left: 20rem;
+  width: 50%;
+}
+
 .buttons{
   width: 100%;
   text-align: start;
-  margin-left: 20rem;
+  margin-left: 2rem;
 }
 
 button {
   margin-right: 2rem;
   padding-right: 2rem;
   padding-left: 2rem;
-}
-
-h2 {
-  margin-top: 5%;
-  margin-left: 20%;
 }

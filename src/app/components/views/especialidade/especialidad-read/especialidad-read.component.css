@@ -3,12 +3,10 @@
   margin: 1.4rem auto auto auto;
 }
 
-.title h1 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  font-style: italic;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+h2 {
+
+  margin-top: 3rem;
+
 }
 
 button {
