@@ -1,39 +1,48 @@
-img {
-  height: 10rem;
-  width: 25rem;
+img{
+  width: 100%;
+  height: 100%;
 }
 
 .conteudo-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 10%;
 
-  .conteudo-form {
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0, 30px 60px 0 gray;
-    text-align: center;
-    width: 45%;
-    width: 350px;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .conteudo-form :hover {
-    box-shadow: 0, 30px 60px 0 blue;
-  }
 }
 
-.input-login {
-  background-color: white;
-  border: none;
-  color: black;
-  padding: 15px 0px;
-  text-align: center;
-  font-size: 16px;
-  margin: 5px;
+.border-conteudo{
   width: 90%;
-  border: 2px solid white;
+  border: solid 2px #818080;
+  padding: 1px 20px;
+  margin: 2%;
+  box-shadow: 2px 3px 6px black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.conteudo-form {
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0, 0px 0px rgb(7, 6, 6);
+  text-align: center;
+  width: 100%;
   transition: all 0.5s ease-in-out;
-  border-radius: 5px 5px 5px 5px;
+  margin: 0 auto;
+}
+
+.conteudo-form :hover {
+  box-shadow: 0, 30px 60px 0 rgb(0, 0, 0);
+}
+
+
+.example-button-row {
+    padding-bottom: 2%;
+}
+
+body {
+background-image: url("src/assets/imagem/3.jpg");
+background-size: cover;
 }
