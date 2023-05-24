@@ -12,7 +12,7 @@ export class EspecialidadReadComponent implements OnInit{
 
   displayedColumns: string[] = [
     "especialidade",
-    "acoes"
+    "delete"
   ];
 
   especialidade: Especialidade[] = [];

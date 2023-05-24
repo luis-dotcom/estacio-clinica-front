@@ -22,9 +22,8 @@ export class UsuarioService {
   public buscarPorId(id: String): Observable<Usuario>{
     return this.http.get<Usuario>("http://localhost:8086/usuario/"+id);
   }
-
-  public buscarPorCpf(cpf: String): Observable<Usuario>{
-    return this.http.get<Usuario>("http://localhost:8086/usuario/cpf="+cpf);
+  public buscarPorSenha(senha: String): Observable<Usuario>{
+    return this.http.get<Usuario>("http://localhost:8086/usuario/senha/"+senha);
   }
 
   public deleteUsuarioService(id: String): Observable<any>{

@@ -27,6 +27,7 @@ import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delet
 import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+import { HeaderComponent } from './components/template/header/header.component';
 
 
 const routes: Routes = [

@@ -16,8 +16,8 @@
         </ng-container>
 
         <!-- Ações de botoes Coluna -->
-        <ng-container matColumnDef="acoes">
-          <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+        <ng-container matColumnDef="delete">
+          <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>Apagar</th>
           <td mat-cell *matCellDef="let row">
 
             <a class="delete" routerLink="delete/{{ row.id }}">

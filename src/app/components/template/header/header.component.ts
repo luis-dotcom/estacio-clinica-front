@@ -1,3 +1,6 @@
+import { ActivatedRoute } from '@angular/router';
+import { Usuario } from '../../views/usuario/usuario.modelo';
+import { LoginComponent } from './../../views/login/login.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -3,34 +3,28 @@
     <div class="border-conteudo">
       <form class="conteudo-form">
         <span>
-          <img  src="assets/imagem/estacio1.png" alt="">
+          <img src="assets/imagem/estacio1.png" alt="" />
         </span>
         <div>
-        <mat-form-field class="conteudo-form" [formGroup]="loginForm">
-          <mat-label>Email</mat-label>
-          <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
-          <mat-error *ngIf="loginForm.hasError('email') && !loginForm.hasError('required')">
-            Please enter a valid email address
-          </mat-error>
-          <mat-error *ngIf="loginForm.hasError('required')">
-            Email is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
+          <mat-form-field class="conteudo-form">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="email"
+              type="email"
+              name="email"/>
+          </mat-form-field>
         </div>
         <div>
-          <mat-form-field class="conteudo-form" [formGroup]="loginForm">
+          <mat-form-field class="conteudo-form">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput formControlName="senha"  placeholder="123456789">
-            <mat-error *ngIf="loginForm.hasError('senha') && !loginForm.hasError('required')">
-              Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="loginForm.hasError('required')">
-              Password is <strong>required</strong>
-            </mat-error>
+            <input
+              matInput
+              [(ngModel)]="senha"
+              type="password"
+              name="senha"/>
           </mat-form-field>
         </div>
         <div class="example-button-row">
-          <button mat-fab extended color="primary" [disabled]="!loginForm.valid" (click)="submitLogin()">
+          <button mat-fab extended color="primary" [disabled]="!senha" (click)="submitLogin()">
             <mat-icon>login</mat-icon>
             Logar
           </button>
