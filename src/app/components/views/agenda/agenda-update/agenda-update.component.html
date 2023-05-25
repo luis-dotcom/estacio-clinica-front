@@ -4,57 +4,89 @@
 <form>
   <h2>Atualizar Agendamento</h2>
   <mat-form-field class="campo_maior">
-      <mat-label>Nome *</mat-label>
-      <input matInput [(ngModel)]="agenda.nome"
-      type="text"
-      name="nome" />
-    </mat-form-field>
+    <mat-label>Nome *</mat-label>
+    <input matInput [(ngModel)]="agenda.nome" type="text" name="nome" />
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Data *</mat-label>
-      <input
-        type="date" matInput [(ngModel)]="agenda.data"
-        type="date"
-        name="data"/>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Data *</mat-label>
+    <input
+      type="date"
+      matInput
+      [(ngModel)]="agenda.data"
+      type="date"
+      name="data"
+    />
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Telefone *</mat-label>
-      <input type="tel" matInput [(ngModel)]="agenda.fone"
-        type="tel"
-        name="telefone"
-        placeholder="Ex: 99 99999-9999"/>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone *</mat-label>
+    <input
+      type="tel"
+      matInput
+      [(ngModel)]="agenda.fone"
+      type="tel"
+      name="telefone"
+      placeholder="Ex: 99 99999-9999"
+    />
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Cpf </mat-label>
-      <input matInput [(ngModel)]="agenda.cpf"
+  <mat-form-field class="campo_menor">
+    <mat-label>Cpf </mat-label>
+    <input
+      matInput
+      [(ngModel)]="agenda.cpf"
       type="text"
       name="cpf"
-      placeholder="Ex: 12345678901"/>
-    </mat-form-field>
+      placeholder="Ex: 12345678901"
+    />
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Especialidade</mat-label>
-      <mat-select [(ngModel)]="agenda.especialidade" name="especialidade">
-        <mat-option *ngFor="let select of especialidades" [value]="select.valor">
-          {{select.verValor}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Especialidade</mat-label>
+    <mat-select [(ngModel)]="agenda.especialidade" name="especialidade">
+      <mat-option *ngFor="let select of especialidades" [value]="select.valor">
+        {{ select.verValor }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Aluno</mat-label>
-      <mat-select [(ngModel)]="agenda.nomeAluno" name="nomeAluno">
-        <mat-option *ngFor="let select of alunos" [value]="select.nome">
-          {{select.nome}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Aluno</mat-label>
+    <mat-select [(ngModel)]="agenda.nomeAluno" name="nomeAluno">
+      <mat-option *ngFor="let select of alunos" [value]="select.nome">
+        {{ select.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div>
+    <mat-radio-group
+      aria-label="Select an option"
+      [(ngModel)]="agenda.presenca"
+    >
+      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="true">Sim</mat-radio-button>
+      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="false">Não</mat-radio-button>
+    </mat-radio-group>
+  </div>
 
-    <div class="buttons">
-      <!-- Botao criar Categoria -->
-      <button (click)="atualizarAgenda()" class="mat-elevation-z8" mat-raised-button color="primary">ATUALIZAR</button>
-      <button (click)="navegarParaAgenda()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
-    </div>
-  </form>
+  <div class="buttons">
+    <!-- Botao criar Categoria -->
+    <button
+      (click)="atualizarAgenda()"
+      class="mat-elevation-z8"
+      mat-raised-button
+      color="primary"
+    >
+      ATUALIZAR
+    </button>
+    <button
+      (click)="navegarParaAgenda()"
+      class="mat-elevation-z8"
+      mat-raised-button
+      color="warn"
+    >
+      CANCELAR
+    </button>
+  </div>
+</form>
+{{ agenda.presenca }}

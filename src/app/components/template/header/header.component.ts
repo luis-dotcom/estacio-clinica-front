@@ -1,6 +1,5 @@
-import { ActivatedRoute } from '@angular/router';
-import { Usuario } from '../../views/usuario/usuario.modelo';
 import { LoginComponent } from './../../views/login/login.component';
+import { Usuario } from '../../views/usuario/usuario.modelo';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 }

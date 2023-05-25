@@ -46,7 +46,6 @@ import { ClienteCreateAgendaComponent } from './components/views/cliente/cliente
 import { EspecialidadeCreateComponent } from './components/views/especialidade/especialidade-create/especialidade-create.component';
 import { EspecialidadeDeleteComponent } from './components/views/especialidade/especialidade-delete/especialidade-delete.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
-
 import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
 import { AlunoDeleteComponent } from './components/views/aluno/aluno-delete/aluno-delete.component';
 import { AlunoUpdateComponent } from './components/views/aluno/aluno-update/aluno-update.component';
@@ -55,6 +54,8 @@ import { UsuarioReadComponent } from './components/views/usuario/usuario-read/us
 import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
+import  {MatCheckboxModule } from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -117,6 +118,8 @@ import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delet
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatSnackBarModule,
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [ClienteService, HttpClientModule],
   bootstrap: [AppComponent],

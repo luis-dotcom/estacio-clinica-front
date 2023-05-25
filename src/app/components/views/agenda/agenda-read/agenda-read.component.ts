@@ -1,6 +1,6 @@
+import { Agenda } from './../agenda.modelo';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Agenda } from '../agenda.modelo';
 import { AgendaService } from '../agenda.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -20,6 +20,7 @@ export class AgendaReadComponent implements OnInit {
     "fone",
     "especialidade",
     "nomeAluno",
+    "presenca",
     "acoes"
   ];
 
@@ -28,8 +29,6 @@ export class AgendaReadComponent implements OnInit {
   qtdAgendadas!: number;
   dataSource!: MatTableDataSource<Agenda>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  disabled = false;
-
 
 constructor(private service: AgendaService, private router: Router) {
     this.service.listarAgendasService().subscribe(resposta => {

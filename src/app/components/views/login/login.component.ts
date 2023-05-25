@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
 import { Router } from '@angular/router';
-import { Usuario } from '../usuario/usuario.modelo';
 import { UsuarioService } from '../usuario/usuario.service';
 
 @Component({
@@ -15,6 +8,7 @@ import { UsuarioService } from '../usuario/usuario.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+
   email!: string;
   senha!: string;
 

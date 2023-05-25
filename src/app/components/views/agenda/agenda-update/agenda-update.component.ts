@@ -10,21 +10,22 @@ import { AlunoService } from '../../aluno/service.service';
 @Component({
   selector: 'app-agenda-update',
   templateUrl: './agenda-update.component.html',
-  styleUrls: ['./agenda-update.component.css']
+  styleUrls: ['./agenda-update.component.css'],
 })
 export class AgendaUpdateComponent {
-
   agenda: Agenda = {
-    nome: "",
-    data: "",
-    fone: "",
-    cpf: "",
-    especialidade:"",
-    nomeAluno: ""
+    nome: '',
+    data: '',
+    fone: '',
+    cpf: '',
+    especialidade: '',
+    nomeAluno: '',
+    presenca: true,
   };
 
   especialidades: Especialidade[] = [];
   alunos: Aluno[] = [];
+  atividadeFixa!: boolean;
 
   constructor(
     private service: AgendaService,
@@ -35,7 +36,7 @@ export class AgendaUpdateComponent {
   ) {}
 
   ngOnInit(): void {
-    this.agenda.id = this.route.snapshot.paramMap.get("id")!;
+    this.agenda.id = this.route.snapshot.paramMap.get('id')!;
     this.buscarPorId();
     this.listarSelects();
   }
@@ -48,16 +49,23 @@ export class AgendaUpdateComponent {
       this.agenda.cpf = resposta.cpf;
       this.agenda.especialidade = resposta.especialidade;
       this.agenda.nomeAluno = resposta.nomeAluno;
+      this.agenda.presenca = resposta.presenca;
     });
   }
 
   public atualizarAgenda(): void {
-     this.service.updateAgendaService(this.agenda).subscribe((resposta) => {
-      this.router.navigate(["agenda"]);
-      this.service.mensagem("Agenda atualizada com sucesso!")
-     }, err => {
-      this.service.mensagem("Validar se todos os campos estão preenchidos corretamente!")
-     })
+    this.agenda.presenca = this.atividadeFixa;
+    this.service.updateAgendaService(this.agenda).subscribe(
+      (resposta) => {
+        this.router.navigate(['agenda']);
+        this.service.mensagem('Agenda atualizada com sucesso!');
+      },
+      (err) => {
+        this.service.mensagem(
+          'Validar se todos os campos estão preenchidos corretamente!'
+        );
+      }
+    );
   }
 
   public listarSelects() {
@@ -69,7 +77,7 @@ export class AgendaUpdateComponent {
     });
   }
 
-  public navegarParaAgenda(){
-    this.router.navigate(["agenda"]);
+  public navegarParaAgenda() {
+    this.router.navigate(['agenda']);
   }
 }

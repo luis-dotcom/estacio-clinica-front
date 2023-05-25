@@ -20,6 +20,7 @@ export class AgendaCreateComponent implements OnInit {
     cpf: '',
     especialidade: '',
     nomeAluno: '',
+    presenca: false
   };
 
   selects: Especialidade[] = [];

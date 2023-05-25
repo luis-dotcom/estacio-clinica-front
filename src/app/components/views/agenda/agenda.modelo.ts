@@ -6,4 +6,5 @@ export interface Agenda {
     fone: String
     especialidade: String
     nomeAluno: String
+    presenca: boolean
   }

@@ -14,6 +14,7 @@ interface TipoPerfil {
   styleUrls: ['./usuario-create.component.css'],
 })
 export class UsuarioCreateComponent implements OnInit {
+
   usuario: Usuario = {
     matricula: '',
     nome: '',
