@@ -52,13 +52,6 @@
           <td mat-cell *matCellDef="let row">{{ row.nomeAluno }}</td>
         </ng-container>
 
-        <ng-container matColumnDef="presenca">
-          <th mat-header-cell *matHeaderCellDef>PRESENÇA</th>
-          <td mat-cell *matCellDef="let row">
-            <mat-checkbox [(ngModel)]="row.presenca" color="primary"></mat-checkbox>
-          </td>
-        </ng-container>
-
         <!-- Ações de botoes Coluna -->
         <ng-container matColumnDef="acoes">
           <th class="mat-header" mat-header-cell *matHeaderCellDef>OPÇÕES</th>

@@ -62,10 +62,8 @@
   <div>
     <mat-radio-group
       aria-label="Select an option"
-      [(ngModel)]="agenda.presenca"
-    >
-      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="true">Sim</mat-radio-button>
-      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="false">Não</mat-radio-button>
+      [(ngModel)]="agenda.presenca">
+      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="true">Presença</mat-radio-button>
     </mat-radio-group>
   </div>
 
@@ -89,4 +87,4 @@
     </button>
   </div>
 </form>
-{{ agenda.presenca }}
+

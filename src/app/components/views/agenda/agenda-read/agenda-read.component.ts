@@ -20,7 +20,6 @@ export class AgendaReadComponent implements OnInit {
     "fone",
     "especialidade",
     "nomeAluno",
-    "presenca",
     "acoes"
   ];
 
