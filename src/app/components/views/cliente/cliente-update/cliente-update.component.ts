@@ -20,7 +20,8 @@ export class ClienteUpdateComponent implements OnInit{
     nomeMae: "",
     naturalidade:"",
     endereco: "",
-    cidade:""
+    cidade:"",
+    idade:''
   };
 
   constructor(

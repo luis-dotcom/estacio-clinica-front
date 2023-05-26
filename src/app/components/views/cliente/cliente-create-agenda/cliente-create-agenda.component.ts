@@ -26,6 +26,7 @@ export class ClienteCreateAgendaComponent implements OnInit {
     naturalidade: '',
     endereco: '',
     cidade: '',
+    idade:''
   };
   agenda: Agenda = {
     nome: '',

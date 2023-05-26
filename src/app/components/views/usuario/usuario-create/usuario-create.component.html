@@ -54,8 +54,15 @@
   <mat-form-field class="campo_menor">
     <mat-label>Senha *</mat-label>
     <input matInput [(ngModel)]="usuario.senha"
-    type="text"
-    name="senha"/>
+    type="password"
+    name="senha" />
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Telefone</mat-label>
+    <input type="fone" matInput [(ngModel)]="usuario.telefone"
+    name="telefone"
+    placeholder="Ex: clinica@yahoo.com" />
   </mat-form-field>
 
 

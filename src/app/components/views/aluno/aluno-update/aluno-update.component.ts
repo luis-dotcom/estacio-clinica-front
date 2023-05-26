@@ -25,7 +25,8 @@ export class AlunoUpdateComponent {
     endereco: "",
     email: "",
     senha: "",
-    curso: ""
+    curso: "",
+    telefone:''
     };
 
     selects: Especialidade[] = [];

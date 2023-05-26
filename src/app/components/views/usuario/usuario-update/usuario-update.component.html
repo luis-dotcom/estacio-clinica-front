@@ -35,6 +35,14 @@
 </mat-form-field>
 
 <mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input matInput [(ngModel)]="usuario.telefone"
+  type="text"
+  name="telefone"
+  placeholder="Ex: 12345678901"/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
   <mat-label>Tipo de Perfil</mat-label>
   <mat-select [(ngModel)]="usuario.tipoPerfil" name="tipoPerfil">
     <mat-option *ngFor="let select of tipos" [value]="select.valor">
@@ -53,7 +61,7 @@
   <mat-form-field class="campo_menor">
     <mat-label>Senha *</mat-label>
     <input matInput [(ngModel)]="usuario.senha"
-    type="text"
+    type="password"
     name="senha"/>
   </mat-form-field>
 
