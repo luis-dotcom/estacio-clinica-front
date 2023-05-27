@@ -4,10 +4,11 @@
 <form>
   <h2>Novo Agendamento</h2>
 
-  <mat-form-field class="campo_maior">
-      <mat-label>Nome *</mat-label>
+<mat-form-field class="campo_maior">
+      <mat-label>Nome do paciente *</mat-label>
       <input matInput [(ngModel)]="agenda.nome"
       type="text"
+      mask="'A{0,100}'" maxlength="100"
       name="nome" />
     </mat-form-field>
 
@@ -15,23 +16,28 @@
       <mat-label>Data *</mat-label>
       <input
         type="date" matInput [(ngModel)]="agenda.data"
-        name="data"/>
+        name="data"
+        mask="00/00/0000" />
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Telefone *</mat-label>
+      <mat-label>celular *</mat-label>
       <input type="tel" matInput [(ngModel)]="agenda.fone"
         type="tel"
-        name="telefone"
-        placeholder="Ex: 99 99999-9999"/>
+        name="celular"
+        prefix="+55"
+        placeholder="Ex: 99-99999-9999"
+        mask="(00)-00000-0000"/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Cpf </mat-label>
-      <input matInput [(ngModel)]="agenda.cpf"
-      type="text"
-      name="cpf"
-      placeholder="Ex: 12345678901"/>
+      <mat-label>CPF *</mat-label>
+      <input matInput [(ngModel)]="agenda.cpf"  
+      type="text" 
+      name="cpf" 
+      placeholder="Ex: 12345678901" 
+      mask="000.000.000-00" 
+       />
     </mat-form-field>
 
   <mat-form-field class="campo_menor">
