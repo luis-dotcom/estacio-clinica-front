@@ -23,7 +23,7 @@
     <mat-label>Telefone *</mat-label>
     <input
       type="tel"
-      matInput
+      matInput maxlength="11"
       [(ngModel)]="agenda.fone"
       type="tel"
       name="telefone"
@@ -34,7 +34,7 @@
   <mat-form-field class="campo_menor">
     <mat-label>Cpf </mat-label>
     <input
-      matInput
+      matInput maxlength="11"
       [(ngModel)]="agenda.cpf"
       type="text"
       name="cpf"

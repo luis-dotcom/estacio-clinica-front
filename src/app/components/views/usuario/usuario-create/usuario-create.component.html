@@ -20,7 +20,7 @@
 
   <mat-form-field class="campo_menor">
   <mat-label>Cpf *</mat-label>
-  <input matInput [(ngModel)]="usuario.cpf"
+  <input matInput maxlength="11" [(ngModel)]="usuario.cpf"
   type="text"
   name="cpf"
   placeholder="Ex: 12345678901"/>
@@ -60,7 +60,7 @@
 
   <mat-form-field class="campo_maior">
     <mat-label>Telefone</mat-label>
-    <input type="fone" matInput [(ngModel)]="usuario.telefone"
+    <input type="fone" matInput maxlength="11" [(ngModel)]="usuario.telefone"
     name="telefone"
     placeholder="Ex: clinica@yahoo.com" />
   </mat-form-field>
