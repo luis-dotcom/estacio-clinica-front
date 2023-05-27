@@ -27,7 +27,6 @@ import { HomeComponent } from './components/views/home/home.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AgendaCreateComponent } from './components/views/agenda/agenda-create/agenda-create.component';
 import { AgendaReadComponent } from './components/views/agenda/agenda-read/agenda-read.component';
 import { ClienteCreateComponent } from './components/views/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/views/cliente/cliente-delete/cliente-delete.component';
@@ -68,7 +67,6 @@ import {MatRadioModule} from '@angular/material/radio';
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ConsultaCreateComponent,
-    AgendaCreateComponent,
     AgendaReadComponent,
     ClienteReadConsultasComponent,
     ClienteConsultaDetalhadaComponent,

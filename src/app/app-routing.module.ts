@@ -2,7 +2,6 @@ import { LoginComponent } from './components/views/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
-import { AgendaCreateComponent } from './components/views/agenda/agenda-create/agenda-create.component';
 import { AgendaReadComponent } from './components/views/agenda/agenda-read/agenda-read.component';
 import { ClienteConsultaDetalhadaComponent } from './components/views/cliente/cliente-consulta-detalhada/cliente-consulta-detalhada.component';
 import { ClienteCreateComponent } from './components/views/cliente/cliente-create/cliente-create.component';
@@ -42,7 +41,6 @@ const routes: Routes = [
   { path: "agenda/clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
   { path: "clientes/:id_cliente/consultas/:id_consulta/consulta", component: ClienteConsultaDetalhadaComponent},
   { path: "agenda", component: AgendaReadComponent },
-  { path: "agenda/create", component: AgendaCreateComponent },
   { path: "agenda/update/:id" , component: AgendaUpdateComponent },
   { path: "clientes/agenda/create/:id" , component: ClienteCreateAgendaComponent },
   { path: "fila" , component: FilaReadComponent },
