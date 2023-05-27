@@ -13,27 +13,26 @@ interface TipoPerfil {
 @Component({
   selector: 'app-aluno-update',
   templateUrl: './aluno-update.component.html',
-  styleUrls: ['./aluno-update.component.css']
+  styleUrls: ['./aluno-update.component.css'],
 })
 export class AlunoUpdateComponent {
-
   aluno: Aluno = {
-    matricula: "",
-    nome: "",
-    tipoPerfil: "",
-    cpf: "",
-    endereco: "",
-    email: "",
-    senha: "",
-    curso: "",
-    telefone:''
-    };
+    matricula: '',
+    nome: '',
+    tipoPerfil: '',
+    cpf: '',
+    endereco: '',
+    email: '',
+    senha: '',
+    curso: '',
+    telefone: '',
+  };
 
-    selects: Especialidade[] = [];
+  selects: Especialidade[] = [];
   tipos: TipoPerfil[] = [
-    {valor: 'ADMIN', viewValor: 'ADMIN'},
-    {valor: 'ALUNO', viewValor: 'ALUNO'},
-    {valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA'},
+    { valor: 'ADMIN', viewValor: 'ADMIN' },
+    { valor: 'ALUNO', viewValor: 'ALUNO' },
+    { valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA' },
   ];
 
   constructor(
@@ -44,7 +43,7 @@ export class AlunoUpdateComponent {
   ) {}
 
   ngOnInit(): void {
-    this.aluno.id = this.route.snapshot.paramMap.get("id")!;
+    this.aluno.id = this.route.snapshot.paramMap.get('id')!;
     this.listarEspecialidade();
     this.buscarPorId();
   }
@@ -69,15 +68,20 @@ export class AlunoUpdateComponent {
   }
 
   public atualizarAluno(): void {
-     this.service.updateAlunoService(this.aluno).subscribe((resposta) => {
-      this.router.navigate(["alunos"]);
-      this.service.mensagem("Aluno atualizado com sucesso!")
-     }, err => {
-      this.service.mensagem("Validar se todos os campos estão preenchidos corretamente!")
-     })
+    this.service.updateAlunoService(this.aluno).subscribe(
+      (resposta) => {
+        this.router.navigate(['alunos']);
+        this.service.mensagem('Aluno atualizado com sucesso!');
+      },
+      (err) => {
+        this.service.mensagem(
+          'Validar se todos os campos estão preenchidos corretamente!'
+        );
+      }
+    );
   }
 
-  public navegarParaListaAlunos(){
-    this.router.navigate(["alunos"]);
+  public navegarParaListaAlunos() {
+    this.router.navigate(['alunos']);
   }
 }

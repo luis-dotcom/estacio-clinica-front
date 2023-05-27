@@ -5,7 +5,7 @@
   <h2>Atualizar Agendamento</h2>
   <mat-form-field class="campo_maior">
     <mat-label>Nome *</mat-label>
-    <input matInput [(ngModel)]="agenda.nome" type="text" name="nome" />
+    <input matInput [(ngModel)]="agenda.nome" type="text" name="nome" disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -16,7 +16,7 @@
       [(ngModel)]="agenda.data"
       type="date"
       name="data"
-    />
+    disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -28,7 +28,7 @@
       type="tel"
       name="telefone"
       placeholder="Ex: 99 99999-9999"
-    />
+    disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -39,7 +39,7 @@
       type="text"
       name="cpf"
       placeholder="Ex: 12345678901"
-    />
+    disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -59,13 +59,6 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  <div>
-    <mat-radio-group
-      aria-label="Select an option"
-      [(ngModel)]="agenda.presenca">
-      <mat-radio-button [(ngModel)]="atividadeFixa" [value]="true">Presença</mat-radio-button>
-    </mat-radio-group>
-  </div>
 
   <div class="buttons">
     <!-- Botao criar Categoria -->

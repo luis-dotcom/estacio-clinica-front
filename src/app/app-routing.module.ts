@@ -27,7 +27,6 @@ import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delet
 import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
-import { HeaderComponent } from './components/template/header/header.component';
 
 
 const routes: Routes = [
@@ -40,6 +39,7 @@ const routes: Routes = [
   { path: "clientes/update/:id", component: ClienteUpdateComponent },
   { path: "clientes/delete/:id", component: ClienteDeleteComponent },
   { path: "clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
+  { path: "agenda/clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
   { path: "clientes/:id_cliente/consultas/:id_consulta/consulta", component: ClienteConsultaDetalhadaComponent},
   { path: "agenda", component: AgendaReadComponent },
   { path: "agenda/create", component: AgendaCreateComponent },

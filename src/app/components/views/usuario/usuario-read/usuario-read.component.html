@@ -3,8 +3,12 @@
 <h1></h1>
 <div class="content">
 <h2>Lista de Usuários</h2>
-    <button class="mat-elevation-z8" (click)="navegarParaUsuarioCreate()" mat-raised-button color="primary">Novo Usuário</button>
 
+    <button class="mat-elevation-z8" mat-button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Novo Usuário</button>
+<mat-menu #menu="matMenu">
+  <button (click)="navegarParaAlunoCreate()" mat-menu-item>Aluno</button>
+  <button (click)="navegarParaUsuarioCreate()" mat-menu-item>Usuário</button>
+</mat-menu>
     <mat-form-field>
       <mat-label>Filtro</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="" #input>

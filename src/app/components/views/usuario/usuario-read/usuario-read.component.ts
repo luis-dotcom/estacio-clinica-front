@@ -39,6 +39,10 @@ export class UsuarioReadComponent implements OnInit{
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  public navegarParaAlunoCreate() {
+    this.router.navigate(['alunos/create']);
+  }
+
   public navegarParaUsuarioCreate() {
     this.router.navigate(['usuarios/create']);
   }

@@ -13,7 +13,6 @@ import { MatPaginator } from '@angular/material/paginator';
 export class AgendaReadComponent implements OnInit {
 
   displayedColumns: string[] = [
-    "id",
     "nome",
     "cpf",
     "data",

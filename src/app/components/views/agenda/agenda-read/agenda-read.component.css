@@ -5,7 +5,6 @@
 
 .mat-mdc-form-field {
   font-size: 14px;
-  margin-left: 5rem;
 }
 
 button {
@@ -16,6 +15,11 @@ button {
     margin-left: 26rem;
     font-size: 1rem;
 
+}
+
+.consultas {
+  margin-left: 30px;
+  color: rgba(196, 105, 31, 0.884);
 }
 
 .edit {
