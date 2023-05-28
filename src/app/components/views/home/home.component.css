@@ -3,20 +3,21 @@
     margin: auto;
     margin-top: 1rem;
     padding-left: 2rem;
+    font-size: 1.2rem;
 }
 
 @media(max-width: 450px) {
-    .home{
-        width: 70%;
-    }
+  .home{
+      width: 70%;
+  }
 }
 @media(max-width: 770px) {
-    .home{
-        width: 90%;
-    }
+  .home{
+      width: 90%;
+  }
 }
 
 .img {
-    width: 30%;
-    margin: auto 20rem;
+  width: 30%;
+  margin: auto 20rem;
 }

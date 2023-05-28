@@ -1,46 +1,49 @@
 <mat-toolbar class="header">
-
   <span>
-      <img src="assets/imagem/estacio1.png" alt="">
+      <img src="assets/imagem/estacio-logo1.png" alt="">
+      <p class="text">Estácio Clinica</p>
   </span>
+  <div class="icons">
 
-  <label><mat-icon>person</mat-icon>{{ nome }}</label>
+    <label ><mat-icon>person</mat-icon></label>
+    <p>Nome</p>
 
-  <a mat-icon-button matTooltip="Link" routerLink=""
-  aria-label="Example icon-button with a heart icon">  Sair<mat-icon>exit_to_app</mat-icon>
-  </a>
+    <a mat-icon-button matTooltip="Link" routerLink="" aria-label="Example icon-button with a heart icon"><mat-icon>exit_to_app</mat-icon></a>
+    <p>Sair</p>
 
-<button class="menu" mat-icon-button [matMenuTriggerFor]="animals"><mat-icon class="iconeMenu" >menu</mat-icon></button>
-<mat-menu #animals="matMenu">
-  <button routerLink="/home" mat-menu-item><mat-icon>home</mat-icon>Home</button>
-  <button mat-menu-item [matMenuTriggerFor]="agenda"><mat-icon>book</mat-icon>Agenda</button>
-  <button mat-menu-item [matMenuTriggerFor]="especialidade"><mat-icon>library_books</mat-icon>Especialidade</button>
-  <button mat-menu-item [matMenuTriggerFor]="paciente"><mat-icon>group</mat-icon>Pacientes</button>
-  <button mat-menu-item [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon>Usuário</button>
-</mat-menu>
+    <button class="menu" mat-icon-button [matMenuTriggerFor]="animals"><mat-icon class="iconeMenu" >menu</mat-icon></button>
+    <mat-menu #animals="matMenu">
+    <button routerLink="/home" mat-menu-item><mat-icon>home</mat-icon>Home</button>
+    <button mat-menu-item [matMenuTriggerFor]="agenda"><mat-icon>book</mat-icon>Agenda</button>
+    <button mat-menu-item [matMenuTriggerFor]="especialidade"><mat-icon>library_books</mat-icon>Especialidade</button>
+    <button mat-menu-item [matMenuTriggerFor]="paciente"><mat-icon>group</mat-icon>Pacientes</button>
+    <button mat-menu-item [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon>Usuário</button>
+    </mat-menu>
 
-<mat-menu #agenda="matMenu">
-  <button routerLink="/agenda" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
-</mat-menu>
+    <mat-menu #agenda="matMenu">
+      <button routerLink="/agenda" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
+    </mat-menu>
 
-<mat-menu #paciente="matMenu">
-  <button routerLink="/clientes" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
-</mat-menu>
+    <mat-menu #paciente="matMenu">
+      <button routerLink="/clientes" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
+    </mat-menu>
 
-<mat-menu #usuario="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="aluno"><mat-icon>school</mat-icon>Aluno</button>
-  <button mat-menu-item [matMenuTriggerFor]="admin"><mat-icon>person</mat-icon>Admin</button>
-</mat-menu>
+    <mat-menu #usuario="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="aluno"><mat-icon>school</mat-icon>Aluno</button>
+      <button mat-menu-item [matMenuTriggerFor]="admin"><mat-icon>person</mat-icon>Admin</button>
+    </mat-menu>
 
-<mat-menu #aluno="matMenu">
-  <button routerLink="/alunos" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
-</mat-menu>
+    <mat-menu #aluno="matMenu">
+      <button routerLink="/alunos" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
+    </mat-menu>
 
-<mat-menu #admin="matMenu">
-  <button routerLink="/usuarios" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
-</mat-menu>
+    <mat-menu #admin="matMenu">
+      <button routerLink="/usuarios" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
+    </mat-menu>
 
-<mat-menu #especialidade="matMenu">
-  <button routerLink="/especialidade" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
-</mat-menu>
+    <mat-menu #especialidade="matMenu">
+      <button routerLink="/especialidade" mat-menu-item><mat-icon>view_list</mat-icon>Lista</button>
+    </mat-menu>
+
+  </div>
 </mat-toolbar>
