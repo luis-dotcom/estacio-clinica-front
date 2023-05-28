@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsuarioService } from '../usuario/usuario.service';
 import { Usuario } from '../usuario/usuario.modelo';
 
@@ -13,15 +13,15 @@ export class LoginComponent implements OnInit {
   email!: string;
   senha!: string;
   usuario!: Usuario
-
+  id!: string;
   constructor(
     private router: Router,
-    public service: UsuarioService
-
+    public service: UsuarioService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-
+    this.id = this.route.snapshot.paramMap.get("id")!
   }
 
   submitLogin() {

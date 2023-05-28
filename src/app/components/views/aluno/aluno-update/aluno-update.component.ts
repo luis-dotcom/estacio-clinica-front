@@ -29,11 +29,7 @@ export class AlunoUpdateComponent {
   };
 
   selects: Especialidade[] = [];
-  tipos: TipoPerfil[] = [
-    { valor: 'ADMIN', viewValor: 'ADMIN' },
-    { valor: 'ALUNO', viewValor: 'ALUNO' },
-    { valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA' },
-  ];
+  tipos: TipoPerfil[] = [{ valor: 'ALUNO', viewValor: 'ALUNO' }];
 
   constructor(
     private service: AlunoService,

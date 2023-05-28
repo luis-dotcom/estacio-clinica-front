@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: "clientes/update/:id", component: ClienteUpdateComponent },
   { path: "clientes/delete/:id", component: ClienteDeleteComponent },
   { path: "clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
-  { path: "agenda/clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
+  { path: "agenda/clientes/:cpf_cliente/consultas", component: ClienteReadConsultasComponent },
   { path: "clientes/:id_cliente/consultas/:id_consulta/consulta", component: ClienteConsultaDetalhadaComponent},
   { path: "agenda", component: AgendaReadComponent },
   { path: "agenda/update/:id" , component: AgendaUpdateComponent },

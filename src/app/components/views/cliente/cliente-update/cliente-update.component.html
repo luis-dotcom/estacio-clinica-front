@@ -63,6 +63,13 @@
       placeholder="Ex: 12345678901"/>
     </mat-form-field>
 
+    <mat-form-field class="campo_menor">
+      <mat-label>Idade</mat-label>
+      <input matInput [(ngModel)]="cliente.idade"
+      type="text"
+      name="idade" required/>
+    </mat-form-field>
+
     <mat-form-field class="campo_maior">
       <mat-label>Email *</mat-label>
       <input type="email" matInput [(ngModel)]="cliente.email"
