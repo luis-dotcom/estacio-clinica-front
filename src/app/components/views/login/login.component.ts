@@ -12,8 +12,9 @@ export class LoginComponent implements OnInit {
 
   email!: string;
   senha!: string;
-  usuario!: Usuario
-  id!: string;
+  usuario!: Usuario;
+  id!: string | undefined;
+
   constructor(
     private router: Router,
     public service: UsuarioService,
@@ -28,7 +29,6 @@ export class LoginComponent implements OnInit {
     this.service.buscarPorSenha(this.senha).subscribe(
       (resposta) => {
         this.usuario = resposta;
-        console.log(this.usuario);
         if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email) {
           this.router.navigate(['/home']);
         } else if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email) {
