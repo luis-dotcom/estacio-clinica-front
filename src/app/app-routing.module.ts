@@ -12,12 +12,8 @@ import { ClienteUpdateComponent } from './components/views/cliente/cliente-updat
 import { ConsultaCreateComponent } from './components/views/consulta/consulta-create/consulta-create.component';
 import { AgendaUpdateComponent } from './components/views/agenda/agenda-update/agenda-update.component';
 import { FilaReadComponent } from './components/views/fila/fila-read/fila-read.component';
-import { DeleteComponent } from './components/views/fila/delete/delete.component';
-import { CreateComponent } from './components/views/fila/create/create.component';
 import { ClienteCreateAgendaComponent } from './components/views/cliente/cliente-create-agenda/cliente-create-agenda.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
-import { EspecialidadeCreateComponent } from './components/views/especialidade/especialidade-create/especialidade-create.component';
-import { EspecialidadeDeleteComponent } from './components/views/especialidade/especialidade-delete/especialidade-delete.component';
 import { AlunoReadComponent } from './components/views/aluno/aluno-read/aluno-read.component';
 import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
 import { AlunoUpdateComponent } from './components/views/aluno/aluno-update/aluno-update.component';
@@ -38,17 +34,13 @@ const routes: Routes = [
   { path: "clientes/update/:id", component: ClienteUpdateComponent },
   { path: "clientes/delete/:id", component: ClienteDeleteComponent },
   { path: "clientes/:id_cliente/consultas", component: ClienteReadConsultasComponent },
-  { path: "agenda/clientes/:cpf_cliente/consultas", component: ClienteReadConsultasComponent },
+  { path: "clientes/:cpf/consultas", component: ClienteReadConsultasComponent },
   { path: "clientes/:id_cliente/consultas/:id_consulta/consulta", component: ClienteConsultaDetalhadaComponent},
   { path: "agenda", component: AgendaReadComponent },
   { path: "agenda/update/:id" , component: AgendaUpdateComponent },
   { path: "clientes/agenda/create/:id" , component: ClienteCreateAgendaComponent },
   { path: "fila" , component: FilaReadComponent },
-  { path: "fila/delete/:id" , component: DeleteComponent },
-  { path: "fila/create" , component: CreateComponent },
   { path: "especialidade" , component: EspecialidadReadComponent },
-  { path: "especialidade/create" , component: EspecialidadeCreateComponent },
-  { path: "especialidade/delete/:id" , component: EspecialidadeDeleteComponent },
   { path: "alunos", component: AlunoReadComponent },
   { path: "alunos/create", component: AlunoCreateComponent },
   { path: "alunos/update/:id", component: AlunoUpdateComponent },

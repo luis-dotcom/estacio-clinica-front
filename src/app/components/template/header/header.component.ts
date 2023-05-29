@@ -1,8 +1,5 @@
-import { LoginComponent } from './../../views/login/login.component';
-import { Usuario } from '../../views/usuario/usuario.modelo';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ClienteService } from '../../views/cliente/cliente.service';
+import { UsuarioService } from '../../views/usuario/usuario.service';
 
 @Component({
   selector: 'app-header',
@@ -12,17 +9,15 @@ import { ClienteService } from '../../views/cliente/cliente.service';
 export class HeaderComponent implements OnInit {
 
 
-  nome: String = "";
-  constructor(private route: ActivatedRoute,private serviceCliente: ClienteService,) {
-
-  }
+  nome: String = '';
+  constructor(private service: UsuarioService) {}
   ngOnInit(): void {
     this.buscarNome();
   }
 
-  buscarNome (): void{
-    this.serviceCliente.buscarPorId('1').subscribe((reposta) => {
+  buscarNome(): void {
+    this.service.buscarPorId('1').subscribe((reposta) => {
       this.nome = reposta.nome;
     });
-    }
+  }
 }

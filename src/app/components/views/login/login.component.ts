@@ -13,15 +13,15 @@ export class LoginComponent implements OnInit {
   email!: string;
   senha!: string;
   usuario!: Usuario
-  id!: string;
+
   constructor(
     private router: Router,
     public service: UsuarioService,
-    private route: ActivatedRoute
+
   ) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get("id")!
+
   }
 
   submitLogin() {
