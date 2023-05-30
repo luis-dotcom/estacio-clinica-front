@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-    this.service.buscarPorSenha(this.senha).subscribe(
-      (resposta) => {
+    this.service.buscarPorSenha(this.senha).subscribe({
+      next: (resposta) => {
         this.usuario = resposta;
-        console.log(this.usuario);
+        this.service.usuario = resposta;
         if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email) {
           this.router.navigate(['/home']);
         } else if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email) {
@@ -37,11 +37,11 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/usuarios']);
         }
       },
-      (err) => {
+      error:(err) => {
         for (let i = 0; i < err.error.errors.length; i++) {
           this.service.mensagem('Usuário não encontrado!');
         }
       }
-    );
+  });
   }
 }

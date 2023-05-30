@@ -9,6 +9,8 @@ import { Usuario } from './usuario.modelo';
 })
 export class UsuarioService {
 
+  usuario!: Usuario;
+
   constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   public listarUsuariosService(): Observable<any> {
