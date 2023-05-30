@@ -1,9 +1,8 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Novo Usuário</h1>
 <form>
-  <h2>Novo Usuário</h2>
-
   <mat-form-field class="campo_menor">
     <mat-label>Matrícula *</mat-label>
     <input matInput [(ngModel)]="usuario.matricula"
@@ -19,7 +18,7 @@
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-  <mat-label>Cpf *</mat-label>
+    <mat-label>Cpf *</mat-label>
   <input matInput maxlength="11" [(ngModel)]="usuario.cpf"
   type="text"
   name="cpf"
@@ -43,7 +42,7 @@
   </mat-select>
 </mat-form-field>
 
-  <mat-form-field class="campo_maior">
+<mat-form-field class="campo_maior">
     <mat-label>Email *</mat-label>
     <input type="email" matInput [(ngModel)]="usuario.email"
     type="email"
@@ -67,8 +66,8 @@
 
 
   <div class="buttons">
-    <!-- Botao criar Categoria -->
     <button (click)="criarUsuario()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
     <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
   </div>
 </form>
+</body>

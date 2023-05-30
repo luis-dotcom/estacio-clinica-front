@@ -1,10 +1,11 @@
 import { Agenda } from './../agenda.modelo';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { AgendaService } from '../agenda.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-
+import { ClienteService } from '../../cliente/cliente.service';
+import { Router } from '@angular/router';
+import { Cliente } from '../../cliente/cliente.modelo';
 
 @Component({
   selector: 'app-agenda-read',
@@ -22,6 +23,8 @@ export class AgendaReadComponent implements OnInit {
     'acoes',
   ];
 
+  cpf: any;
+  cliente!: Cliente;
   agenda: Agenda[] = [];
   qtdAgendadas!: number;
   dataSource!: MatTableDataSource<Agenda>;
@@ -30,6 +33,7 @@ export class AgendaReadComponent implements OnInit {
   constructor(
     private serviceAgenda: AgendaService,
     private router: Router,
+    private serviceCliente: ClienteService
   ) {
     this.serviceAgenda.listarAgendasService().subscribe((resposta) => {
       this.dataSource = new MatTableDataSource(resposta);
@@ -50,5 +54,17 @@ export class AgendaReadComponent implements OnInit {
     this.serviceAgenda.quantidadeAgendadas().subscribe((resposta) => {
       this.qtdAgendadas = resposta;
     });
+  }
+  onClick(): void {
+    this.serviceCliente.buscarPorCpf(this.cpf).subscribe((resposta) => {
+      this.cliente = resposta;
+     if(this.cliente != null){
+       this.router.navigate(['clientes/' + this.cliente.id + '/consultas']);
+      } else {
+        this.serviceAgenda.mensagem('Paciente não encontrado!')
+      }
+
+    }
+    );
   }
 }

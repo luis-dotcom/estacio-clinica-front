@@ -1,5 +1,3 @@
-import { LoginComponent } from './../../views/login/login.component';
-import { Usuario } from '../../views/usuario/usuario.modelo';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsuarioService } from '../../views/usuario/usuario.service';
@@ -23,5 +21,5 @@ export class HeaderComponent implements OnInit {
     this.service.buscarPorId('1').subscribe((reposta) => {
       this.nome = reposta.nome;
     });
-    }
+  }
 }

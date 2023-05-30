@@ -39,11 +39,7 @@ import { ClienteConsultaDetalhadaComponent } from './components/views/cliente/cl
 import { LoginComponent } from './components/views/login/login.component';
 import { AgendaUpdateComponent } from './components/views/agenda/agenda-update/agenda-update.component';
 import { FilaReadComponent } from './components/views/fila/fila-read/fila-read.component';
-import { CreateComponent } from './components/views/fila/create/create.component';
-import { DeleteComponent } from './components/views/fila/delete/delete.component';
 import { ClienteCreateAgendaComponent } from './components/views/cliente/cliente-create-agenda/cliente-create-agenda.component';
-import { EspecialidadeCreateComponent } from './components/views/especialidade/especialidade-create/especialidade-create.component';
-import { EspecialidadeDeleteComponent } from './components/views/especialidade/especialidade-delete/especialidade-delete.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
 import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
 import { AlunoDeleteComponent } from './components/views/aluno/aluno-delete/aluno-delete.component';
@@ -73,11 +69,7 @@ import {MatRadioModule} from '@angular/material/radio';
     LoginComponent,
     AgendaUpdateComponent,
     FilaReadComponent,
-    CreateComponent,
-    DeleteComponent,
     ClienteCreateAgendaComponent,
-    EspecialidadeCreateComponent,
-    EspecialidadeDeleteComponent,
     EspecialidadReadComponent,
     AlunoCreateComponent,
     AlunoDeleteComponent,

@@ -8,9 +8,8 @@
   margin-left: 5rem;
 }
 
-.title {
+h1 {
   text-align: center;
-  margin-right: 5rem;
 }
 
 button {
@@ -18,9 +17,11 @@ button {
 }
 
 .total {
-  margin-left: 30rem;
+  color: black;
+  margin-left: 80%;
   font-size: 1rem;
-
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .button_Opcoes {
@@ -41,4 +42,9 @@ button {
 
 .delete {
   color: rgb(253, 0, 0);
+}
+
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
 }

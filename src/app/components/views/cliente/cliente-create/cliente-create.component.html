@@ -1,8 +1,8 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <h1>Novo Paciente</h1>
 <form>
-  <h2>Novo Paciente</h2>
   <mat-form-field class="campo_maior">
     <mat-label>Nome Completo</mat-label>
     <input matInput [(ngModel)]="cliente.nome"
@@ -20,17 +20,17 @@
   <mat-form-field class="campo_menor">
     <mat-label>Data de Nascimento</mat-label>
     <input
-      type="date" matInput [(ngModel)]="cliente.dataNascimento"
-      placeholder="DD/MM/AAAA"
-      name="dataNascimento" required/>
+    type="date" matInput [(ngModel)]="cliente.dataNascimento"
+    placeholder="DD/MM/AAAA"
+    name="dataNascimento" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
     <mat-label>Endereço</mat-label>
     <input
-      matInput [(ngModel)]="cliente.endereco"
-      type="text"
-      name="endereco" required/>
+    matInput [(ngModel)]="cliente.endereco"
+    type="text"
+    name="endereco" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -43,9 +43,9 @@
   <mat-form-field class="campo_menor">
     <mat-label>Telefone</mat-label>
     <input type="tel" maxlength="11" matInput [(ngModel)]="cliente.telefone"
-      type="tel"
-      name="telefone"
-      placeholder="Ex: 99 99999-9999" required/>
+    type="tel"
+    name="telefone"
+    placeholder="Ex: 99 99999-9999" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
@@ -73,7 +73,7 @@
   <mat-form-field class="campo_maior">
     <mat-label><strong>E-mail</strong></mat-label>
     <input type="email" matInput [(ngModel)]="cliente.email"
-      placeholder="Ex: clinica@estacio.com">
+    placeholder="Ex: clinica@estacio.com">
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
@@ -91,4 +91,5 @@
     <button (click)="navegarParaListaClientes()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
   </div>
 </form>
+</body>
 
