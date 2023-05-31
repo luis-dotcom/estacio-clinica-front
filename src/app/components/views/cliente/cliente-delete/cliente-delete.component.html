@@ -4,7 +4,7 @@
   <h1>Deletar Paciente</h1>
   <form>
     <mat-form-field class="campo_maior">
-      <mat-label>Nome *</mat-label>
+      <mat-label>Nome</mat-label>
       <input matInput [(ngModel)]="cliente.nome"
       type="text"
       name="nome" disabled/>
@@ -19,14 +19,14 @@
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Naturalidade *</mat-label>
+      <mat-label>Naturalidade</mat-label>
       <input matInput [(ngModel)]="cliente.naturalidade"
       type="text"
       name="naturalidade" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_maior">
-      <mat-label>Endereço *</mat-label>
+      <mat-label>Endereço</mat-label>
       <input
         matInput [(ngModel)]="cliente.endereco"
         type="text"
@@ -34,14 +34,14 @@
       </mat-form-field>
 
       <mat-form-field class="campo_menor">
-      <mat-label>Cidade *</mat-label>
+      <mat-label>Cidade</mat-label>
       <input matInput [(ngModel)]="cliente.cidade"
       type="text"
       name="cidade" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Telefone *</mat-label>
+      <mat-label>Telefone</mat-label>
       <input type="tel" matInput [(ngModel)]="cliente.telefone"
         type="tel"
         name="telefone"
@@ -49,37 +49,44 @@
       </mat-form-field>
 
       <mat-form-field class="campo_maior">
-      <mat-label>Nome da Mãe *</mat-label>
+      <mat-label>Nome da Mãe</mat-label>
       <input matInput [(ngModel)]="cliente.nomeMae"
       type="text"
       name="nomeMae" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Cpf *</mat-label>
+      <mat-label>CPF</mat-label>
       <input matInput [(ngModel)]="cliente.cpf"
       type="text"
       name="cpf"
       placeholder="Ex: 12345678901" disabled/>
     </mat-form-field>
 
+    <mat-form-field class="campo_menor">
+      <mat-label>Idade</mat-label>
+      <input matInput [(ngModel)]="cliente.idade"
+      type="text"
+      name="cpf"
+      placeholder="Ex: 12345678901" disabled/>
+    </mat-form-field>
+
     <mat-form-field class="campo_maior">
-      <mat-label>Email *</mat-label>
-      <input type="email" matInput [(ngModel)]="cliente.email"
+      <mat-label>E-mail</mat-label>
+      <input matInput [(ngModel)]="cliente.email"
       type="email"
       name="email"
       placeholder="Ex: clinica@yahoo.com" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Sexo *</mat-label>
+      <mat-label>Sexo</mat-label>
       <input matInput [(ngModel)]="cliente.sexo"
       type="text"
       name="sexo" disabled/>
     </mat-form-field>
 
     <div class="buttons">
-      <!-- Botao criar Categoria -->
       <button (click)="deletarCliente()" class="mat-elevation-z8" mat-raised-button color="warn">DELETAR</button>
       <button (click)="navegarParaListaClientes()" class="mat-elevation-z8" mat-raised-button color="primary">CANCELAR</button>
     </div>

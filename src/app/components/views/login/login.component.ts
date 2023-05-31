@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   email!: string;
   senha!: string;
-  usuario!: Usuario
+  usuario!: Usuario;
 
   constructor(
     private router: Router,
@@ -25,23 +25,20 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-    this.service.buscarPorSenha(this.senha).subscribe({
+    this.service.buscarPorEmail(this.email).subscribe({
       next: (resposta) => {
         this.usuario = resposta;
         this.service.usuario = resposta;
-        if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email) {
+        if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
           this.router.navigate(['/home']);
-        } else if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email) {
+        } if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
           this.router.navigate(['/alunos']);
-        } else if (this.usuario.tipoPerfil === 'RECEPCIONISTA' && this.usuario.email === this.email) {
+        } if (this.usuario.tipoPerfil === 'RECEPCIONISTA' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
           this.router.navigate(['/usuarios']);
-        }
-      },
-      error:(err) => {
-        for (let i = 0; i < err.error.errors.length; i++) {
-          this.service.mensagem('Usuário não encontrado!');
-        }
+        } if (this.usuario === null){
+          this.service.mensagem('E-mail ou Senha incorreto!');
       }
+    }
   });
   }
 }

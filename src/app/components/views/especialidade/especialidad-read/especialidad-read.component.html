@@ -7,10 +7,10 @@
     <h1>Especialidades</h1>
 
   <mat-form-field class="campo_maior">
-    <mat-label>Especialidade</mat-label>
+    <mat-label><strong>Especialidade</strong></mat-label>
     <input matInput [(ngModel)]="especialidadeCreate.valor"
     type="text"
-    name="nome"/>
+    name="nome" required>
   </mat-form-field>
 
  <button (click)="criarEspecialidade()" class="mat-elevation-z8" mat-raised-button color="primary">ADICIONAR</button>
