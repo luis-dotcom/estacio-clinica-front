@@ -7,7 +7,6 @@ import { UsuarioService } from '../../views/usuario/usuario.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  usu!: LoginComponent;
   nome!:string;
   constructor(private route: ActivatedRoute, public service: UsuarioService,) {
 

@@ -5,7 +5,9 @@
     margin-top: 1rem;
     padding-left: 2rem;
     font-size: 1.2rem;
-    background-color: rgb(115, 186, 228);
+    box-shadow: 2px 3px 6px black;
+    border: solid 1px black;
+
 }
 
 @media(max-width: 450px) {
@@ -37,6 +39,6 @@ img {
 
 
 body {
-  background-image: url("src/assets/imagem/imagemHome_6.webp");
-  background-size: cover;
+ /* background-image: url("src/assets/imagem/imagemHome_6.webp");
+  background-size: cover;*/
   }
