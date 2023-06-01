@@ -71,7 +71,7 @@
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
-    <mat-label><strong>E-mail</strong></mat-label>
+    <mat-label>E-mail</mat-label>
     <input type="email" matInput [(ngModel)]="cliente.email"
     placeholder="Ex: clinica@estacio.com">
   </mat-form-field>
@@ -86,7 +86,6 @@
   </mat-form-field>
 
   <div class="buttons">
-    <!-- Botao criar Categoria -->
     <button (click)="criarCliente()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
     <button (click)="navegarParaListaClientes()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
   </div>

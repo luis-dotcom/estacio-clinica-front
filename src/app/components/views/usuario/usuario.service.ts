@@ -9,6 +9,8 @@ import { Usuario } from './usuario.modelo';
 })
 export class UsuarioService {
 
+  usuario!: Usuario;
+
   constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   public listarUsuariosService(): Observable<any> {
@@ -22,8 +24,8 @@ export class UsuarioService {
   public buscarPorId(id: String): Observable<Usuario>{
     return this.http.get<Usuario>("http://localhost:8086/usuario/"+id);
   }
-  public buscarPorSenha(senha: String): Observable<Usuario>{
-    return this.http.get<Usuario>("http://localhost:8086/usuario/senha/"+senha);
+  public buscarPorEmail(email: String): Observable<Usuario>{
+    return this.http.get<Usuario>("http://localhost:8086/usuario/email/"+email);
   }
 
   public deleteUsuarioService(id: String): Observable<any>{

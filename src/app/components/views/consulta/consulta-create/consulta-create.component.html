@@ -1,47 +1,44 @@
-<app-header></app-header>
-<app-footer></app-footer>
-<h1></h1>
+<body>
+  <app-header></app-header>
+  <app-footer></app-footer>
+<h1>Nova Consulta</h1>
 <form>
-  <form>
-
-<div>
-  <label>Nome do Paciente: {{ nome }}</label>
-</div>
-
-
+  <div>
+    <p>Nome do Paciente: {{ nome }}</p>
+  </div>
     <mat-form-field class="campo_menor">
-      <mat-label>Matrícula *</mat-label>
+      <mat-label>Matrícula</mat-label>
       <input matInput [(ngModel)]="consulta.matricula"
       type="text"
-      name="matricula" />
+      name="matricula" required>
     </mat-form-field>
 
     <mat-form-field class="campo_maior">
-      <mat-label>Nome Atendente *</mat-label>
+      <mat-label>Nome Atendente</mat-label>
       <input matInput [(ngModel)]="consulta.nomeAtendente"
       type="text"
-      name="nomeAtendente" />
+      name="nomeAtendente" required>
     </mat-form-field>
 
-       <mat-form-field class="data">
+    <mat-form-field class="data">
           <mat-label>Data Consulta</mat-label>
           <input matInput [(ngModel)]="consulta.dataConsulta"
-           type="date"
-           name="dataConsulta"/>
-       </mat-form-field>
+          type="date"
+          name="dataConsulta"required>
+        </mat-form-field>
 
-       <mat-form-field class="campo_textarea">
+        <mat-form-field class="campo_textarea">
             <mat-label>Queixas</mat-label>
             <textarea matInput [(ngModel)]="consulta.queixas"
-              type="text"
-              name="queixas"
+            type="text"
+            name="queixas"
             ></textarea>
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
             <mat-label>Plano</mat-label>
             <textarea matInput [(ngModel)]="consulta.plano"
-              type="text"
+            type="text"
               name="plano"
             ></textarea>
           </mat-form-field>
@@ -51,12 +48,12 @@
             <textarea matInput [(ngModel)]="consulta.avaliacao"
               type="text"
               name="avaliacao"
-            ></textarea>
-          </mat-form-field>
+              ></textarea>
+            </mat-form-field>
 
-          <mat-form-field class="campo_textarea">
-            <mat-label>Exames</mat-label>
-            <textarea matInput [(ngModel)]="consulta.exames"
+            <mat-form-field class="campo_textarea">
+              <mat-label>Exames</mat-label>
+              <textarea matInput [(ngModel)]="consulta.exames"
               type="text"
               name="queixas"
             ></textarea>
@@ -65,25 +62,22 @@
           <mat-form-field class="campo_textarea">
             <mat-label>Encaminhamento</mat-label>
             <textarea matInput [(ngModel)]="consulta.encaminhamento"
-              type="text"
-              name="encaminhamento"
+            type="text"
+            name="encaminhamento"
             ></textarea>
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
             <mat-label>Observação</mat-label>
             <textarea matInput [(ngModel)]="consulta.observacao"
-              type="text"
-              name="observacao"
+            type="text"
+            name="observacao"
             ></textarea>
           </mat-form-field>
 
           <div class="buttons">
-            <!-- Botao criar Categoria -->
             <button (click)="criarConsulta()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
             <button (click)="navegarParaListaConsultas()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
           </div>
-
-      </form>
-
-  </form>
+        </form>
+      </body>

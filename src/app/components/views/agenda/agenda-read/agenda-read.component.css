@@ -40,3 +40,23 @@ body {
   background-color: rgb(115, 186, 228);
   background-size: cover;
 }
+
+.botaoImprimir {
+  margin-left: 100%;
+}
+
+.only-print{
+  display: none;
+}
+
+@media print{
+
+  .no-print{
+    display: none !important;
+  }
+
+  .only-print{
+    display: block;
+  }
+}
+
