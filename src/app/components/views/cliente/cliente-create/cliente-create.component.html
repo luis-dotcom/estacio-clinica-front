@@ -57,17 +57,16 @@
 
   <mat-form-field class="campo_menor">
     <mat-label>CPF</mat-label>
-    <input matInput maxlength="11" [(ngModel)]="cliente.cpf"
-    type="text"
+    <input matInput #input maxlength="11" type="tel" [(ngModel)]="cliente.cpf"
     name="cpf"
     placeholder="Ex: 12345678901" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-    <mat-label>Idade</mat-label>
-    <input matInput [(ngModel)]="cliente.idade"
+    <mat-label>Bairro</mat-label>
+    <input matInput [(ngModel)]="cliente.bairro"
     type="text"
-    name="idade" required/>
+    name="bairro" required/>
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
