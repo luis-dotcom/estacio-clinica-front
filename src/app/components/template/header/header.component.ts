@@ -8,11 +8,11 @@ import { UsuarioService } from '../../views/usuario/usuario.service';
 })
 export class HeaderComponent implements OnInit {
 
-  private id ='1';
+  private id ='';
   nome: String = '';
   constructor(private service: UsuarioService) {}
   ngOnInit(): void {
-    this.id = this.service.usuario && this.service.usuario.id ?  this.service.usuario.id : '1';
+    this.id = this.service.usuario && this.service.usuario.id ?  this.service.usuario.id : '';
     this.buscarNome();
   }
 
