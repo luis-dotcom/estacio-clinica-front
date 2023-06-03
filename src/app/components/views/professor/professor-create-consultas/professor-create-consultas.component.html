@@ -4,20 +4,20 @@
 <h1>Nova Consulta</h1>
 <form>
   <div>
-    <p>Nome do Paciente: {{ nome }}</p>
+    <p>Nome do Paciente: {{ nomeCliente }}</p>
   </div>
     <mat-form-field class="campo_menor">
       <mat-label>Matrícula</mat-label>
-      <input matInput [(ngModel)]="consulta.matricula"
+      <input matInput [(ngModel)]="matricula"
       type="text"
-      name="matricula" required>
+      name="matricula" disabled>
     </mat-form-field>
 
     <mat-form-field class="campo_maior">
       <mat-label>Nome Atendente</mat-label>
-      <input matInput [(ngModel)]="consulta.nomeAtendente"
+      <input matInput [(ngModel)]="nomeUsuario"
       type="text"
-      name="nomeAtendente" required>
+      name="nomeAtendente" disabled>
     </mat-form-field>
 
     <mat-form-field class="data">
