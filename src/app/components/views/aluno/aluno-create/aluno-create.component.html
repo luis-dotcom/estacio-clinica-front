@@ -2,8 +2,15 @@
 
   <app-header></app-header>
   <app-footer></app-footer>
-  <h1>Novo Aluno</h1>
+  <h1>Adicionar Aluno</h1>
   <form>
+
+    <mat-form-field class="campo_maior">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput [(ngModel)]="aluno.nome"
+      type="text"
+      name="nome" required/>
+    </mat-form-field>
 
     <mat-form-field class="campo_menor">
       <mat-label>Matrícula</mat-label>
@@ -13,36 +20,43 @@
     </mat-form-field>
 
     <mat-form-field class="campo_maior">
-      <mat-label>Nome</mat-label>
-      <input matInput [(ngModel)]="aluno.nome"
+      <mat-label>Endereço</mat-label>
+      <input
+      matInput [(ngModel)]="aluno.endereco"
       type="text"
-      name="nome" required/>
+      name="endereco" required/>
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
+      <mat-label>Telefone</mat-label>
+      <input matInput #input maxlength="11" minlength="11" type="number" [(ngModel)]="aluno.telefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+      name="telefone"
+      placeholder="Ex: 12345678901" required/>
+    </mat-form-field>
+
+    <mat-form-field class="campo_maior">
+      <mat-label>E-mail</mat-label>
+      <input type="email" matInput [(ngModel)]="aluno.email"
+        type="email"
+        name="email"
+        placeholder="Ex: meuemail@email.com" required/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Tipo de Perfil</mat-label>
+        <mat-select [(ngModel)]="aluno.tipoPerfil" name="select" required>
+          <mat-option *ngFor="let select of tipos" [value]="select.valor">
+            {{select.viewValor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
       <mat-label>CPF</mat-label>
-      <input matInput maxlength="11" [(ngModel)]="aluno.cpf"
-  type="text"
-  name="cpf"
-  placeholder="Ex: 12345678901" required/>
-</mat-form-field>
-
-<mat-form-field class="campo_maior">
-  <mat-label>Endereço</mat-label>
-  <input
-  matInput [(ngModel)]="aluno.endereco"
-  type="text"
-  name="endereco" required/>
-</mat-form-field>
-
-<mat-form-field class="campo_menor">
-  <mat-label>Tipo de Perfil</mat-label>
-  <mat-select [(ngModel)]="aluno.tipoPerfil" name="select" required>
-    <mat-option *ngFor="let select of tipos" [value]="select.valor">
-      {{select.viewValor}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+      <input matInput #input maxlength="11" minlength="11" type="number" [(ngModel)]="aluno.cpf" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+      name="cpf"
+      placeholder="Ex: 12345678901" required/>
+    </mat-form-field>
 
 <mat-form-field class="campo_menor">
   <mat-label>Curso</mat-label>
@@ -53,27 +67,13 @@
   </mat-select>
 </mat-form-field>
 
-<mat-form-field class="campo_maior">
-  <mat-label>E-mail</mat-label>
-  <input type="email" matInput [(ngModel)]="aluno.email"
-    type="email"
-    name="email"
-    placeholder="Ex: clinica@estacio.com" required/>
-  </mat-form-field>
+<mat-form-field class="campo_menor">
+  <mat-label>Senha</mat-label>
+  <input matInput [(ngModel)]="aluno.senha"
+  type="password"
+  name="senha" required>
+</mat-form-field>
 
-  <mat-form-field class="campo_menor">
-    <mat-label>Senha</mat-label>
-    <input matInput [(ngModel)]="aluno.senha"
-    type="password"
-    name="senha" required>
-  </mat-form-field>
-
-  <mat-form-field class="campo_menor">
-    <mat-label>Telefone</mat-label>
-    <input matInput maxlength="11" [(ngModel)]="aluno.telefone"
-    type="text"
-    name="telefone" required>
-  </mat-form-field>
 
 
   <div class="buttons">

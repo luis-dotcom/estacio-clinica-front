@@ -1,0 +1,22 @@
+.content {
+  width: 50%;
+  margin: 1.4rem auto auto auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+margin-left: 10px;
+}
+
+.delete {
+  color: red;
+  margin-left: 1rem;
+}
+
+body {
+  background-color: rgb(115, 186, 228);
+  background-size: cover;
+}

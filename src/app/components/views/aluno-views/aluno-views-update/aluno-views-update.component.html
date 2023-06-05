@@ -1,0 +1,87 @@
+<body>
+  <app-aluno-header></app-aluno-header>
+  <app-footer></app-footer>
+  <h1>Atualizar Cadastro</h1>
+  <form>
+
+    <mat-form-field class="campo_menor">
+    <mat-label>Matrícula</mat-label>
+    <input matInput [(ngModel)]="aluno.matricula"
+    type="text"
+    name="matricula" required/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome Completo</mat-label>
+    <input matInput [(ngModel)]="aluno.nome"
+    type="text"
+    name="nome" required/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>CPF</mat-label>
+    <input matInput #input maxlength="11" minlength="11" type="number" [(ngModel)]="aluno.cpf" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    name="cpf"
+    placeholder="Ex: 12345678901" required/>
+  </mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>Endereço</mat-label>
+  <input
+  matInput [(ngModel)]="aluno.endereco"
+  type="text"
+  name="endereco"required>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Tipo de Perfil</mat-label>
+  <mat-select [(ngModel)]="aluno.tipoPerfil" name="tipoPerfil" disabled>
+    <mat-option *ngFor="let select of tipos" [value]="select.valor">
+      {{select.viewValor}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>E-mail</mat-label>
+  <input type="email" matInput [(ngModel)]="aluno.email"
+  type="email"
+  name="email"
+  placeholder="Ex: clinica@estacio.com" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Curso</mat-label>
+  <mat-select [(ngModel)]="aluno.curso" name="curso" required>
+    <mat-option *ngFor="let select of selects" [value]="select.valor">
+      {{select.verValor}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input matInput #input maxlength="11" minlength="11" type="number" [(ngModel)]="aluno.telefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  name="telefone"
+  placeholder="Ex: 12345678901" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_senha">
+  <mat-label>Senha</mat-label>
+  <input
+    matInput
+    [(ngModel)]="aluno.senha"
+    [type]="hide ? 'password' : 'text'"
+    name="senha" required/>
+    <button class="buttonVisibilidadeSenha" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+</mat-form-field>
+
+
+<div class="buttons">
+    <button (click)="atualizarAluno()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+    <button (click)="navegarParaHomeAluno()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+  </div>
+</form>
+</body>

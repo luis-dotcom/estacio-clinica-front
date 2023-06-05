@@ -11,51 +11,6 @@
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Data de Nascimento</mat-label>
-      <input
-      type="date" matInput [(ngModel)]="cliente.dataNascimento"
-      type="date"
-        name="dataNascimento" disabled/>
-    </mat-form-field>
-
-    <mat-form-field class="campo_menor">
-      <mat-label>Naturalidade</mat-label>
-      <input matInput [(ngModel)]="cliente.naturalidade"
-      type="text"
-      name="naturalidade" disabled/>
-    </mat-form-field>
-
-    <mat-form-field class="campo_maior">
-      <mat-label>Endereço</mat-label>
-      <input
-        matInput [(ngModel)]="cliente.endereco"
-        type="text"
-        name="endereco" disabled/>
-      </mat-form-field>
-
-      <mat-form-field class="campo_menor">
-      <mat-label>Cidade</mat-label>
-      <input matInput [(ngModel)]="cliente.cidade"
-      type="text"
-      name="cidade" disabled/>
-    </mat-form-field>
-
-    <mat-form-field class="campo_menor">
-      <mat-label>Telefone</mat-label>
-      <input type="tel" matInput [(ngModel)]="cliente.telefone"
-        type="tel"
-        name="telefone"
-        placeholder="Ex: 99 99999-9999" disabled/>
-      </mat-form-field>
-
-      <mat-form-field class="campo_maior">
-      <mat-label>Nome da Mãe</mat-label>
-      <input matInput [(ngModel)]="cliente.nomeMae"
-      type="text"
-      name="nomeMae" disabled/>
-    </mat-form-field>
-
-    <mat-form-field class="campo_menor">
       <mat-label>CPF</mat-label>
       <input matInput [(ngModel)]="cliente.cpf"
       type="text"
@@ -64,11 +19,56 @@
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
+      <mat-label>Data de Nascimento</mat-label>
+      <input
+      type="date" matInput [(ngModel)]="cliente.dataNascimento"
+      type="date"
+      name="dataNascimento" disabled/>
+    </mat-form-field>
+
+    <mat-form-field class="campo_maior">
+      <mat-label>Endereço</mat-label>
+      <input
+      matInput [(ngModel)]="cliente.endereco"
+      type="text"
+      name="endereco" disabled/>
+    </mat-form-field>
+
+    <mat-form-field class="campo_menor">
       <mat-label>Bairro</mat-label>
       <input matInput [(ngModel)]="cliente.bairro"
       type="text"
-      name="cpf"
+      name="bairro"
       placeholder="Ex: 12345678901" disabled/>
+    </mat-form-field>
+
+    <mat-form-field class="campo_menor">
+      <mat-label>Cidade</mat-label>
+      <input matInput [(ngModel)]="cliente.cidade"
+      type="text"
+      name="cidade" disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome da Mãe</mat-label>
+    <input matInput [(ngModel)]="cliente.nomeMae"
+    type="text"
+    name="nomeMae" disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+      <mat-label>Naturalidade</mat-label>
+      <input matInput [(ngModel)]="cliente.naturalidade"
+      type="text"
+      name="naturalidade" disabled/>
+    </mat-form-field>
+
+   <mat-form-field class="campo_menor">
+      <mat-label>Telefone</mat-label>
+      <input type="tel" matInput [(ngModel)]="cliente.telefone"
+        type="tel"
+        name="telefone"
+        placeholder="Ex: 99 99999-9999" disabled/>
     </mat-form-field>
 
     <mat-form-field class="campo_maior">
@@ -80,7 +80,7 @@
     </mat-form-field>
 
     <mat-form-field class="campo_menor">
-      <mat-label>Sexo</mat-label>
+      <mat-label>Gênero</mat-label>
       <input matInput [(ngModel)]="cliente.sexo"
       type="text"
       name="sexo" disabled/>

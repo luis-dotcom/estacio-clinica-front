@@ -14,7 +14,11 @@ export class CanActiveGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    if (this.service.usuario != null){
+      return true;
+    } else {
+      return false;
     }
+  }
  }
 

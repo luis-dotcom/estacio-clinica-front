@@ -1,19 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Usuario } from '../../../models/usuario.modelo';
-import { UsuarioService } from '../../../services/usuario.service';
-
-interface TipoPerfil {
-  valor: string;
-  viewValor: string;
-}
+import { Usuario } from 'src/app/components/models/usuario.modelo';
+import { UsuarioService } from 'src/app/components/services/usuario.service';
 
 @Component({
-  selector: 'app-usuario-update',
-  templateUrl: './usuario-update.component.html',
-  styleUrls: ['./usuario-update.component.css']
+  selector: 'app-professor-update',
+  templateUrl: './professor-update.component.html',
+  styleUrls: ['./professor-update.component.css']
 })
-export class UsuarioUpdateComponent implements OnInit{
+export class ProfessorUpdateComponent {
 
   usuario: Usuario = {
     matricula: "",
@@ -26,11 +21,7 @@ export class UsuarioUpdateComponent implements OnInit{
     telefone:''
     };
 
-  tipos: TipoPerfil[] = [
-    {valor: 'ALUNO', viewValor: 'ALUNO'},
-    {valor: 'PROFESSOR', viewValor: 'PROFESSOR'},
-    {valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA'},
-  ];
+    hide = true;
 
   constructor(
     private service: UsuarioService,
@@ -58,7 +49,7 @@ export class UsuarioUpdateComponent implements OnInit{
 
   public atualizarUsuario(): void {
      this.service.updateUsuarioService(this.usuario).subscribe((resposta) => {
-      this.router.navigate(["usuarios"]);
+      this.router.navigate(["/home/professor"]);
       this.service.mensagem("Usuário (" + this.usuario.nome + ") atualizado com sucesso!")
      }, err => {
       this.service.mensagem("Validar se todos os campos estão preenchidos corretamente!")
@@ -66,6 +57,6 @@ export class UsuarioUpdateComponent implements OnInit{
   }
 
   public navegarParaListaUsuarios(){
-    this.router.navigate(["usuarios"]);
+    this.router.navigate(["/home/professor"]);
   }
 }

@@ -4,6 +4,13 @@
 <h1>Apagar Aluno</h1>
 
 <form>
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome Completo</mat-label>
+    <input matInput [(ngModel)]="aluno.nome"
+    type="text"
+    name="nome" disabled/>
+  </mat-form-field>
+
   <mat-form-field class="campo_menor">
     <mat-label>Matrícula</mat-label>
     <input matInput [(ngModel)]="aluno.matricula"
@@ -12,27 +19,35 @@
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
-    <mat-label>Nome</mat-label>
-    <input matInput [(ngModel)]="aluno.nome"
+    <mat-label>Endereço</mat-label>
+    <input
+    matInput [(ngModel)]="aluno.endereco"
     type="text"
-    name="nome" disabled/>
+    name="endereco" disabled/>
   </mat-form-field>
 
   <mat-form-field class="campo_menor">
-    <mat-label>CPF</mat-label>
-    <input matInput [(ngModel)]="aluno.cpf"
+    <mat-label>Telefone</mat-label>
+    <input matInput [(ngModel)]="aluno.telefone"
+    type="text"
+    name="telefone" disabled/>
+  </mat-form-field>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>E-mail</mat-label>
+    <input type="email" matInput [(ngModel)]="aluno.email"
+    name="email"
+    disabled/>
+  </mat-form-field>
+
+ <mat-form-field class="campo_menor">
+      <mat-label>CPF</mat-label>
+      <input matInput [(ngModel)]="aluno.cpf"
     type="text"
     name="cpf"
     disabled/>
   </mat-form-field>
 
-  <mat-form-field class="campo_maior">
-    <mat-label>Endereço</mat-label>
-  <input
-  matInput [(ngModel)]="aluno.endereco"
-  type="text"
-  name="endereco" disabled/>
-</mat-form-field>
 
 <mat-form-field class="campo_menor">
   <mat-label>Tipo Perfil</mat-label>
@@ -50,13 +65,6 @@
   disabled/>
 </mat-form-field>
 
-<mat-form-field class="campo_maior">
-  <mat-label>E-mail</mat-label>
-  <input type="email" matInput [(ngModel)]="aluno.email"
-  type="email"
-  name="email"
-  disabled/>
-</mat-form-field>
 
   <mat-form-field class="campo_menor">
     <mat-label>Senha</mat-label>
@@ -66,12 +74,6 @@
     disabled/>
   </mat-form-field>
 
-  <mat-form-field class="campo_menor">
-    <mat-label>Telefone</mat-label>
-    <input matInput [(ngModel)]="aluno.telefone"
-    type="text"
-    name="telefone" disabled/>
-  </mat-form-field>
 
 
   <div class="buttons">

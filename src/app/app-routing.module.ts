@@ -1,3 +1,4 @@
+import { AlunoViewsUpdateComponent } from './components/views/aluno-views/aluno-views-update/aluno-views-update.component';
 import { ProfessorUpdateAgendaComponent } from './components/views/professor/professor-update-agenda/professor-update-agenda.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -41,17 +42,24 @@ import { RecepcaoUpdateClienteComponent } from './components/views/recepcao-view
 import { RecepcaoCreateAgendaComponent } from './components/views/recepcao-views/recepcao-create-agenda/recepcao-create-agenda.component';
 import { RecepcaoReadConsultasComponent } from './components/views/recepcao-views/recepcao-read-consultas/recepcao-read-consultas.component';
 import { RecepcaoConsultaDetalhadaComponent } from './components/views/recepcao-views/recepcao-consulta-detalhada/recepcao-consulta-detalhada.component';
+import { ProfessorUpdateComponent } from './components/views/professor/professor-update/professor-update.component';
+import { RecepcaoUpdateComponent } from './components/views/recepcao-views/recepcao-update/recepcao-update.component';
+import { ProfessorEspecialidadeComponent } from './components/views/professor/professor-especialidade/professor-especialidade.component';
+import { CanActiveGuard } from './components/views/guard/can-active.guard';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: "home", component: HomeComponent },
+  { path: "home", component: HomeComponent, canActivate: [CanActiveGuard] },
   { path: "home/professor", component: ProfessorHomeComponent },
   { path: "home/aluno", component: AlunoHomeComponent },
   { path: "home/recepcao", component: RecepcaoHomeComponent },
   { path: "professor/agenda", component: ProfessorReadAgendaComponent},
   { path: "recepcao/agenda", component: RecepcaoReadAgendaComponent},
+  { path: "professor/update/:id", component: ProfessorUpdateComponent},
+  { path: "aluno/update/:id", component: AlunoViewsUpdateComponent},
+  { path: "recepcao/update/:id", component: RecepcaoUpdateComponent},
   { path: "professor/clientes/consulta/:id_cliente/consultas/create", component: ProfessorCreateConsultasComponent },
   { path: "professor/clientes/:id_cliente/consultas", component: ProfessorReadConsultasComponent },
   { path: "professor/agenda/update/:id" , component: ProfessorUpdateAgendaComponent },
@@ -79,6 +87,7 @@ const routes: Routes = [
   { path: "recepcao/clientes/agenda/create/:id" , component: RecepcaoCreateAgendaComponent },
   { path: "fila" , component: FilaReadComponent },
   { path: "especialidade" , component: EspecialidadReadComponent },
+  { path: "professor/especialidade" , component: ProfessorEspecialidadeComponent },
   { path: "alunos", component: AlunoReadComponent },
   { path: "alunos/create", component: AlunoCreateComponent },
   { path: "alunos/update/:id", component: AlunoUpdateComponent },

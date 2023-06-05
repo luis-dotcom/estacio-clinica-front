@@ -1,7 +1,7 @@
 <body>
   <app-header></app-header>
   <app-footer></app-footer>
-<h1>Apagar Usuário</h1>
+<h1>Deletar Usuário</h1>
 <form>
 
   <mat-form-field class="campo_menor">
@@ -12,7 +12,7 @@
   </mat-form-field>
 
   <mat-form-field class="campo_maior">
-    <mat-label>Nome</mat-label>
+    <mat-label>Nome Completo</mat-label>
     <input matInput [(ngModel)]="usuario.nome"
     type="text"
     name="nome" />
@@ -43,7 +43,7 @@
 </mat-form-field>
 
 <mat-form-field class="campo_maior">
-  <mat-label>Email</mat-label>
+  <mat-label>E-mail</mat-label>
   <input matInput [(ngModel)]="usuario.email"
   type="email"
   name="email"
