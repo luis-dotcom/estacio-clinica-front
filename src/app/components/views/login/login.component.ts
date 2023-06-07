@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   hide = true;
   email!: string;
   senha!: string;
-  usuario!: Usuario;
+  usuario!: Usuario
 
   constructor(
     private router: Router,
