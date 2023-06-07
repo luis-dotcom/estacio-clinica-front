@@ -30,18 +30,22 @@ export class LoginComponent implements OnInit {
       next: (resposta) => {
         this.usuario = resposta;
         this.service.usuario = resposta;
-        if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
-          this.router.navigate(['/home']);
-        } if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
-          this.router.navigate(['/home/aluno']);
-        } if (this.usuario.tipoPerfil === 'PROFESSOR' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
-          this.router.navigate(['/home/professor']);
-        } if (this.usuario.tipoPerfil === 'RECEPCIONISTA' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
-          this.router.navigate(['/home/recepcao']);
-        }if (this.usuario === null){
-          this.service.mensagem('E-mail ou Senha incorreto!');
-      }
-    }
+        if(resposta != null ) {
+          if (this.usuario.tipoPerfil === 'ADMIN' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
+           this.router.navigate(['/home']);
+          } else if (this.usuario.tipoPerfil === 'ALUNO' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
+           this.router.navigate(['/home/aluno']);
+          } else if (this.usuario.tipoPerfil === 'PROFESSOR' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
+           this.router.navigate(['/home/professor']);
+          } else if (this.usuario.tipoPerfil === 'RECEPCIONISTA' && this.usuario.email === this.email && this.usuario.senha === this.senha) {
+           this.router.navigate(['/home/recepcao']);
+          } else if (this.usuario.email != this.email || this.usuario.senha != this.senha) {
+            this.service.mensagem('Usuário não encontrado E-mail ou Senha incorreto!')
+           }
+        } else {
+        this.service.mensagem('Usuário não encontrado E-mail ou Senha incorreto!')
+     }
+    }, error: (err) => {}
   });
-  }
+ }
 }

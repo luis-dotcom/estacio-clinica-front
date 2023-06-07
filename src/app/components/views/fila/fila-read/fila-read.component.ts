@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Fila } from '../../../models/fila.modelo';
 import { FilaService } from '../../../services/fila.service';
 
@@ -34,7 +34,7 @@ export class FilaReadComponent implements OnInit{
   public criarOrdemDeChegada(): void {
     this.service.criarFilaService(this.filaCreate).subscribe(
       (resposta) => {
-        location.reload();
+        this.router.navigate(["/home"]);
       },
       (err) => {
         for (let i = 0; i < err.error.errors.length; i++) {
@@ -56,13 +56,9 @@ export class FilaReadComponent implements OnInit{
     });
   }
 
-  public navegarParaFilaCreate() {
-    this.router.navigate(["fila/create"]);
-  }
-
   public deletarDaFila(id: any): void {
     this.service.deleteFilaService(id).subscribe((reposta) => {
-      location.reload();
+      this.router.navigate(["/home"]);
     });
   }
 
