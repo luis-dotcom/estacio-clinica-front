@@ -61,12 +61,15 @@ img {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .example-card {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    grid-auto-rows: 100px;
     margin-top: 1%;
+    margin: 0 auto;
   }
+
   .a, .b, .c, .d {
     grid-column-start: auto;
     grid-column-end: auto;
@@ -88,7 +91,8 @@ img {
   }
   .c{
     grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-end: 3;
   }
+
 }
 

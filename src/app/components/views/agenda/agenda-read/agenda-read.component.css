@@ -1,3 +1,4 @@
+/*
 .content {
   width: 80%;
   margin: 1.4rem auto auto auto;
@@ -5,6 +6,10 @@
 
 h1 {
   text-align: center;
+}
+
+.content a{
+  float: right;
 }
 
 .mat-mdc-form-field {
@@ -17,7 +22,6 @@ button {
 
 .total {
   color: black;
-  margin-left: 60%;
   font-size: 1rem;
   font-weight: bold;
   text-transform: capitalize;
@@ -38,11 +42,10 @@ button {
 
 body {
   background-color: rgb(115, 186, 228);
-  background-size: cover;
 }
 
 .botaoImprimir {
-  margin-left: 100%;
+  float: right;
 }
 
 .only-print{
@@ -78,3 +81,130 @@ body {
   font-weight: bold;
 }
 
+.content-table{
+  width: 100%;
+}
+
+
+*/
+
+/* Estilos gerais */
+
+h1 {
+  text-align: center;
+}
+
+.botaoImprimir{
+  float: right;
+}
+
+
+.content{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content a{
+  float: right;
+  margin-right: 10px;
+  font-style: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+body {
+  background-color: rgb(115, 186, 228);
+}
+
+
+/* Estilos do botão de impressão */
+
+
+/* Estilos do campo de filtro */
+.mat-form-field {
+  margin-top: 20px;
+}
+
+/* Estilos do link de total */
+.total {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Estilos da tabela */
+.content-table {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Estilos das opções */
+.button_Opcoes {
+  display: none;
+}
+
+/* Estilos da mensagem de nenhum agendamento */
+.mat-cell.mat-cell {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Estilos do paginador */
+.paginador {
+  margin-top: 20px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 600px) {
+  /* Estilos do botão de impressão */
+  .botaoImprimir {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos do campo de filtro */
+  .mat-form-field {
+    width: 100%;
+  }
+
+  /* Estilos do link de total */
+  .total {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Estilos da tabela responsiva */
+  .table {
+    overflow-x: auto;
+  }
+
+  /* Estilos das opções */
+  .button_Opcoes {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Estilos do paginador responsivo */
+  .paginador {
+    margin-bottom: 20px;
+  }
+}
