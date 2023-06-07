@@ -3,12 +3,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from '../../../models/cliente.modelo';
 import { ClienteService } from '../../../services/cliente.service';
 
+interface Sexo {
+  valor: string;
+  viewValor: string;
+}
+
 @Component({
   selector: 'app-cliente-update',
   templateUrl: './cliente-update.component.html',
   styleUrls: ['./cliente-update.component.css']
 })
 export class ClienteUpdateComponent implements OnInit{
+
+  tipoSexo: Sexo[] = [
+    { valor: 'Masculino', viewValor: 'Masculino' },
+    { valor: 'Feminino', viewValor: 'Feminino' },
+    { valor: 'Prefiro não dizer', viewValor: 'Prefiro não dizer' },
+    { valor: 'Outros', viewValor: 'Outros' },
+  ];
 
   cliente: Cliente = {
     nome: "",

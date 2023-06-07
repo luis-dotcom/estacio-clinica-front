@@ -8,7 +8,7 @@ import { UsuarioService } from '../../services/usuario.service';
 })
 export class RecepcaoHeaderComponent implements OnInit {
 
-  private id ='';
+  id ='';
   nome: String = '';
   constructor(private service: UsuarioService) {}
   ngOnInit(): void {

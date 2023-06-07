@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { Aluno } from '../../../models/aluno.modelo';
-import { AlunoService } from '../../../services/service.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { EspecialidadeService } from '../../../services/especialidade.service';
-import { Especialidade } from '../../../models/especialidade.modelo';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Aluno } from 'src/app/components/models/aluno.modelo';
+import { Especialidade } from 'src/app/components/models/especialidade.modelo';
+import { EspecialidadeService } from 'src/app/components/services/especialidade.service';
+import { AlunoService } from 'src/app/components/services/service.service';
 
 interface TipoPerfil {
   valor: string;
@@ -11,11 +11,12 @@ interface TipoPerfil {
 }
 
 @Component({
-  selector: 'app-aluno-update',
-  templateUrl: './aluno-update.component.html',
-  styleUrls: ['./aluno-update.component.css'],
+  selector: 'app-aluno-views-update',
+  templateUrl: './aluno-views-update.component.html',
+  styleUrls: ['./aluno-views-update.component.css']
 })
-export class AlunoUpdateComponent {
+export class AlunoViewsUpdateComponent implements OnInit{
+
   aluno: Aluno = {
     matricula: '',
     nome: '',
@@ -28,6 +29,7 @@ export class AlunoUpdateComponent {
     telefone: '',
   };
 
+  hide = true;
   selects: Especialidade[] = [];
   tipos: TipoPerfil[] = [{ valor: 'ALUNO', viewValor: 'ALUNO' }];
 
@@ -67,7 +69,7 @@ export class AlunoUpdateComponent {
   public atualizarAluno(): void {
     this.service.updateAlunoService(this.aluno).subscribe(
       (resposta) => {
-        this.router.navigate(['alunos']);
+        this.router.navigate(['/home/aluno']);
         this.service.mensagem('Aluno atualizado com sucesso!');
       },
       (err) => {
@@ -78,7 +80,7 @@ export class AlunoUpdateComponent {
     );
   }
 
-  public navegarParaListaAlunos() {
-    this.router.navigate(['alunos']);
+  public navegarParaHomeAluno() {
+    this.router.navigate(['/home/aluno']);
   }
 }

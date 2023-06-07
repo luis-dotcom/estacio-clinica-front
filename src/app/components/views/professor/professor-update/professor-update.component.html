@@ -1,7 +1,7 @@
 <body>
-  <app-header></app-header>
+  <app-professor-header></app-professor-header>
   <app-footer></app-footer>
-  <h1>Atualizar Usuário</h1>
+  <h1>Atualizar Cadastro</h1>
 <form>
 
   <mat-form-field class="campo_menor">
@@ -40,13 +40,24 @@
   placeholder="Ex: 12345678901" required/>
 </mat-form-field>
 
-<mat-form-field class="campo_menor">
+<mat-form-field class="campo_maior">
   <mat-label>Tipo de Perfil</mat-label>
-  <mat-select [(ngModel)]="usuario.tipoPerfil" name="tipoPerfil">
-    <mat-option *ngFor="let select of tipos" [value]="select.valor">
-      {{select.viewValor}}
-    </mat-option>
-  </mat-select>
+  <input
+  matInput [(ngModel)]="usuario.tipoPerfil"
+  type="text"
+  name="tipoPerfil" disabled/>
+</mat-form-field>
+
+<mat-form-field class="campo_senha">
+  <mat-label>Senha</mat-label>
+  <input
+    matInput
+    [(ngModel)]="usuario.senha"
+    [type]="hide ? 'password' : 'text'"
+    name="senha" required/>
+    <button class="buttonVisibilidadeSenha" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
 </mat-form-field>
 
 <mat-form-field class="campo_maior">
@@ -54,13 +65,6 @@
   <input type="email" matInput [(ngModel)]="usuario.email"
   name="email"
   placeholder="Ex: clinica@yahoo.com" required/>
-</mat-form-field>
-
-<mat-form-field class="campo_menor">
-  <mat-label>Senha</mat-label>
-  <input matInput [(ngModel)]="usuario.senha"
-  type="password"
-  name="senha" required/>
 </mat-form-field>
 
 <div class="buttons">

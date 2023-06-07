@@ -4,85 +4,86 @@
 <h1>Atualizar Paciente</h1>
 <form>
   <mat-form-field class="campo_maior">
-    <mat-label>Nome</mat-label>
+    <mat-label>Nome Completo</mat-label>
     <input matInput [(ngModel)]="cliente.nome"
     type="text"
     name="nome" required/>
-    </mat-form-field>
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Data de Nascimento</mat-label>
-      <input
-      type="date" matInput [(ngModel)]="cliente.dataNascimento"
-      name="dataNascimento" required/>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>CPF</mat-label>
+    <input matInput #input maxlength="11" type="number" [(ngModel)]="cliente.cpf" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    name="cpf"
+    placeholder="Ex: 12345678901" required/>
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Naturalidade</mat-label>
-      <input matInput [(ngModel)]="cliente.naturalidade"
-      type="text"
-      name="naturalidade" required/>
-    </mat-form-field>
 
-    <mat-form-field class="campo_maior">
-      <mat-label>Endereço</mat-label>
-      <input
-      matInput [(ngModel)]="cliente.endereco"
-      type="text"
-        name="endereco" required/>
-    </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Data de Nascimento</mat-label>
+    <input
+    type="date" matInput [(ngModel)]="cliente.dataNascimento"
+    placeholder="DD/MM/AAAA"
+    name="dataNascimento" required/>
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Cidade</mat-label>
-      <input matInput [(ngModel)]="cliente.cidade"
-      type="text"
-      name="cidade" required/>
-    </mat-form-field>
+  <mat-form-field class="campo_maior">
+    <mat-label>Endereço</mat-label>
+    <input
+    matInput [(ngModel)]="cliente.endereco"
+    type="text"
+    name="endereco" required/>
+  </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Telefone</mat-label>
-      <input type="tel" maxlength="11" matInput [(ngModel)]="cliente.telefone"
-        type="text"
-        name="telefone"
-        placeholder="Ex: 99 99999-9999" required/>
-      </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Bairro</mat-label>
+    <input matInput [(ngModel)]="cliente.bairro"
+    type="text"
+    name="bairro" required/>
+  </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Cidade</mat-label>
+    <input matInput [(ngModel)]="cliente.cidade"
+    type="text"
+    name="cidade" required/>
+  </mat-form-field>
 
-      <mat-form-field class="campo_maior">
-        <mat-label>Nome da Mãe</mat-label>
-        <input matInput [(ngModel)]="cliente.nomeMae"
-        type="text"
-        name="nomeMae" required/>
-      </mat-form-field>
 
-      <mat-form-field class="campo_menor">
-        <mat-label>CPF</mat-label>
-        <input matInput maxlength="11" [(ngModel)]="cliente.cpf"
-        type="text"
-        name="cpf"
-        placeholder="Ex: 12345678901" required/>
-      </mat-form-field>
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome da Mãe</mat-label>
+    <input matInput [(ngModel)]="cliente.nomeMae"
+    type="text"
+    name="nomeMae" required/>
+  </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Telefone</mat-label>
+    <input matInput #input maxlength="11" minlength="11" minlength="11" type="number" [(ngModel)]="cliente.telefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    name="telefone"
+    placeholder="Ex: 12345678901" required/>
+  </mat-form-field>
 
-      <mat-form-field class="campo_menor">
-        <mat-label>Bairro</mat-label>
-        <input matInput [(ngModel)]="cliente.bairro"
-        type="text"
-        name="idade" required/>
-      </mat-form-field>
+  <mat-form-field class="campo_menor">
+    <mat-label>Naturalidade</mat-label>
+    <input matInput [(ngModel)]="cliente.naturalidade"
+    type="text"
+    name="naturalidade" required/>
+  </mat-form-field>
 
-      <mat-form-field class="campo_maior">
-      <mat-label>E-mail</mat-label>
-      <input matInput [(ngModel)]="cliente.email"
-      type="email"
-      name="email"
-      placeholder="Ex: clinica@estacio.com"/>
-    </mat-form-field>
 
-    <mat-form-field class="campo_menor">
-      <mat-label>Sexo</mat-label>
-      <input matInput [(ngModel)]="cliente.sexo"
-      type="text"
-      name="sexo" required/>
-    </mat-form-field>
+  <mat-form-field class="campo_maior">
+    <mat-label>E-mail</mat-label>
+    <input type="email" matInput [(ngModel)]="cliente.email"
+    name="email"
+    placeholder="Ex: meuemail@email.com">
+  </mat-form-field>
+
+  <mat-form-field class="campo_menor">
+    <mat-label>Gênero</mat-label>
+    <mat-select [(ngModel)]="cliente.sexo" name="sexo" required>
+      <mat-option *ngFor="let select of tipoSexo" [value]="select.valor">
+        {{select.viewValor}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
     <div class="buttons">
       <button (click)="atualizarCliente()" class="mat-elevation-z8" mat-raised-button color="primary">ATUALIZAR</button>

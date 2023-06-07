@@ -18,7 +18,8 @@ export class AlunoReadComponent implements OnInit{
     'cpf',
     'tipoPerfil',
     'curso',
-    'senha',
+    'telefone',
+    'email',
     'acoes',
   ];
 

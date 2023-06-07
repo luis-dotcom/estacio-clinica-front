@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Especialidade } from '../../../models/especialidade.modelo';
-import { EspecialidadeService } from '../../../services/especialidade.service';
 import { Router } from '@angular/router';
+import { Especialidade } from 'src/app/components/models/especialidade.modelo';
+import { EspecialidadeService } from 'src/app/components/services/especialidade.service';
 
 @Component({
-  selector: 'app-especialidad-read',
-  templateUrl: './especialidad-read.component.html',
-  styleUrls: ['./especialidad-read.component.css']
+  selector: 'app-professor-especialidade',
+  templateUrl: './professor-especialidade.component.html',
+  styleUrls: ['./professor-especialidade.component.css']
 })
-export class EspecialidadReadComponent implements OnInit{
+export class ProfessorEspecialidadeComponent implements OnInit {
 
   displayedColumns: string[] = [
     "especialidade",
@@ -39,7 +39,7 @@ export class EspecialidadReadComponent implements OnInit{
     this.service.criarEspecialidadeService(this.especialidadeCreate).subscribe(
       (resposta) => {
         this.service.mensagem('Especialidade adicionado com sucesso!');
-        this.router.navigate(["/home"]);
+        this.router.navigate(["/home/professor"]);
       },
       (err) => {
         for (let i = 0; i < err.error.errors.length; i++) {
@@ -51,8 +51,7 @@ export class EspecialidadReadComponent implements OnInit{
   public deletarEspecialidade(id: any): void {
     this.service.deleteEspecialidadeService(id).subscribe((reposta) => {
       this.service.mensagem("Especialidade Deletada com Sucesso!");
-      this.router.navigate(["/home"]);
+      this.router.navigate(["/home/professor"]);
     });
   }
-
 }

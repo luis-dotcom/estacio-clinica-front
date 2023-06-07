@@ -49,8 +49,8 @@ import { UsuarioReadComponent } from './components/views/usuario/usuario-read/us
 import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
-import  {MatCheckboxModule } from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 import { ProfessorHomeComponent } from './components/views/professor/professor-home/professor-home.component';
 import { ProfessorHeaderComponent } from './components/template/professor-header/professor-header.component';
 import { AlunoHeaderComponent } from './components/template/aluno-header/aluno-header.component';
@@ -73,6 +73,10 @@ import { RecepcaoUpdateClienteComponent } from './components/views/recepcao-view
 import { RecepcaoCreateAgendaComponent } from './components/views/recepcao-views/recepcao-create-agenda/recepcao-create-agenda.component';
 import { RecepcaoReadConsultasComponent } from './components/views/recepcao-views/recepcao-read-consultas/recepcao-read-consultas.component';
 import { RecepcaoConsultaDetalhadaComponent } from './components/views/recepcao-views/recepcao-consulta-detalhada/recepcao-consulta-detalhada.component';
+import { ProfessorUpdateComponent } from './components/views/professor/professor-update/professor-update.component';
+import { AlunoViewsUpdateComponent } from './components/views/aluno-views/aluno-views-update/aluno-views-update.component';
+import { RecepcaoUpdateComponent } from './components/views/recepcao-views/recepcao-update/recepcao-update.component';
+import { ProfessorEspecialidadeComponent } from './components/views/professor/professor-especialidade/professor-especialidade.component';
 
 @NgModule({
   declarations: [
@@ -123,6 +127,10 @@ import { RecepcaoConsultaDetalhadaComponent } from './components/views/recepcao-
     RecepcaoCreateAgendaComponent,
     RecepcaoReadConsultasComponent,
     RecepcaoConsultaDetalhadaComponent,
+    ProfessorUpdateComponent,
+    AlunoViewsUpdateComponent,
+    RecepcaoUpdateComponent,
+    ProfessorEspecialidadeComponent,
 
 
   ],

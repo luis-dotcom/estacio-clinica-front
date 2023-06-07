@@ -1,26 +1,22 @@
 <mat-toolbar class="header">
   <span>
       <img src="assets/imagem/estacio-logo1.png" alt="">
-      <p class="text">Estácio Clinica</p>
+      <p class="text">Clínica Estácio</p>
   </span>
   <div class="icons">
 
     <label><mat-icon>person</mat-icon></label>
     <p>{{ nome }}</p>
 
-    <a mat-icon-button matTooltip="Link" routerLink="/home" aria-label="Example icon-button with a heart icon"><mat-icon>home</mat-icon></a>
-    <p>Home</p>
-
-    <a mat-icon-button matTooltip="Link" routerLink="" aria-label="Example icon-button with a heart icon"><mat-icon>exit_to_app</mat-icon></a>
-    <p>Sair</p>
-
     <button class="menu" mat-icon-button [matMenuTriggerFor]="opcoes"><mat-icon class="iconeMenu" >menu</mat-icon></button>
     <mat-menu #opcoes="matMenu">
-    <button mat-menu-item routerLink="/agenda"><mat-icon>book</mat-icon>Agenda</button>
-    <button mat-menu-item routerLink="/especialidade"><mat-icon>library_books</mat-icon>Especialidade</button>
-    <button mat-menu-item routerLink="/fila"><mat-icon>person_add</mat-icon>Ordem de Chegada</button>
-    <button mat-menu-item routerLink="/clientes"><mat-icon>group</mat-icon>Pacientes</button>
-    <button mat-menu-item routerLink="/usuarios"><mat-icon>person</mat-icon>Usuários</button>
+      <button mat-menu-item routerLink="/home"><mat-icon>home</mat-icon>Home</button>
+      <button mat-menu-item routerLink="/agenda"><mat-icon>book</mat-icon>Agenda</button>
+      <button mat-menu-item routerLink="/especialidade"><mat-icon>library_books</mat-icon>Especialidade</button>
+    <!-- <button mat-menu-item routerLink="/fila"><mat-icon>person_add</mat-icon>Ordem de Chegada</button> -->
+      <button mat-menu-item routerLink="/clientes"><mat-icon>group</mat-icon>Pacientes</button>
+      <button mat-menu-item routerLink="/usuarios"><mat-icon>person</mat-icon>Usuários</button>
+      <button mat-menu-item routerLink=""><mat-icon>exit_to_app</mat-icon>Sair</button>
     </mat-menu>
   </div>
 

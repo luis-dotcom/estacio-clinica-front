@@ -14,6 +14,18 @@ h1 {
   text-align: center;
 }
 
+.campo_senha {
+  margin-left: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 26%;
+}
+
+form {
+  margin-left: 20rem;
+  width: 50%;
+}
+
 .buttons {
   width: 100%;
   text-align: start;

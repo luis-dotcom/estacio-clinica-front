@@ -18,6 +18,7 @@ export class UsuarioReadComponent implements OnInit{
     'cpf',
     'tipoPerfil',
     'telefone',
+    'email',
     'acoes',
   ];
 

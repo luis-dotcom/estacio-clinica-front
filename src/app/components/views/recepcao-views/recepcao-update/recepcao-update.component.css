@@ -10,11 +10,23 @@
   margin-left: 2rem;
 }
 
+.campo_senha {
+  margin-left: 2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 26%;
+}
+
 h1 {
   text-align: center;
 }
 
-.buttons {
+form {
+  margin-left: 20rem;
+  width: 60%;
+}
+
+.buttons{
   width: 100%;
   text-align: start;
   margin-left: 2rem;
@@ -30,3 +42,4 @@ body {
   background-color: rgb(115, 186, 228);
   background-size: cover;
 }
+
