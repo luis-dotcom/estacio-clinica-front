@@ -1,83 +1,46 @@
-
-
-
-/* Estilos para imagens */
 img {
   height: 70px;
   width: 70px;
 }
 
-/* Estilos para o cabeçalho */
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
-/* Estilos para os spans */
 span {
   display: flex;
   align-items: center;
 }
 
-/* Estilos para os ícones do Material Design */
-.mat-icon {
-  color: rgba(0, 0, 252, 0.836);
+.material-icons {
+  color: rgb(51, 139, 132);
 }
 
-/* Estilos para o ícone do menu */
 .iconeMenu {
-  color: blue;
+  color:rgb(51, 139, 132);
+
 }
 
-/* Estilos para o ícone de configurações */
-.iconeSetting {
-  color: black;
+.iconeSetting{
+  color: rgb(51, 139, 132);
+
 }
 
-/* Estilos para o texto */
-.text {
+.text{
   font-size: 2rem;
   padding-left: 1%;
   text-align: center;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins,sans-serif;
   font-weight: bold;
+
 }
 
-/* Estilos para os ícones */
-.icons {
+
+
+
+.icons{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* Estilos específicos para dispositivos móveis */
-@media only screen and (max-width: 700px) {
-  /* Redimensionar a altura e largura das imagens */
-  img {
-    height: 50px;
-    width: 50px;
-  }
-
-  /* Ajustar o tamanho do texto */
-  .text {
-    font-size: 1.5rem;
-  }
-
-  .header {
-    display: block;
-  }
-
-  span{
-    margin: 0 auto;
-    justify-content: center;
-  }
-
-  .icons{
-    display: none;
-  }
-
-  .icons-mobile{
-    display: block;
-  }
 }

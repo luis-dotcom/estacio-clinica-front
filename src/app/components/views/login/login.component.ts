@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
             this.service.mensagem('Usuário não encontrado E-mail ou Senha incorreto!')
            }
         } else {
-        this.service.mensagem('Usuário não encontrado E-mail ou Senha incorreto!')
+        this.service.mensagem('Usuário não encontrado! E-mail ou Senha incorreto.')
      }
     }, error: (err) => {}
   });

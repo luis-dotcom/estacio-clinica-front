@@ -5,101 +5,53 @@
     margin-top: 1rem;
     padding-left: 2rem;
     font-size: 1.2rem;
-    box-shadow: 2px 3px 6px black;
-    border: solid 1px black;
+    background-color: rgb(51, 139, 132);
+}
 
+
+@keyframes go-back {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media(max-width: 450px) {
+  .home{
+      width: 70%;
+  }
+}
+@media(max-width: 770px) {
+  .home{
+      width: 90%;
+  }
+}
+
+p {
+  margin-top: 20px;
+
+  margin-left: 50px;
 }
 
 img {
-  border-radius: 20px;
+  height: 80%;
+  margin-top: 20px;
+  max-width: 350px;
+  margin-left: 50px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0, 0px 0px blue;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
 }
+
+
 
 .example-card {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 90%;
-  grid-auto-rows: 100px;
-  margin: 0 auto;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  margin-top: 1%;
-  border-radius: 20px;
+  margin-top: 50px;
+  max-width: 200px;
+  animation: go-back 5s backwards;
 }
 
-.a{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-.b{
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.c{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.d{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.a, .b, .c, .d{
-  width: 100%;
-  height: 100%;
-}
-
-
-@media (max-width: 800px) {
-  .example-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-auto-rows: 100px;
-    margin-top: 1%;
-    margin: 0 auto;
-  }
-
-  .a, .b, .c, .d {
-    grid-column-start: auto;
-    grid-column-end: auto;
-    grid-row-start: auto;
-    grid-row-end: auto;
-  }
-
-  .a{
-    grid-row-start: 1;
-    grid-row-end: 1;
-  }
-  .b{
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .c{
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .c{
-    grid-row-start: 3;
-    grid-row-end: 3;
-  }
-
-}
-
-
-body {
- /* background-image: url("src/assets/imagem/imagemHome_6.webp");
-  background-size: cover;*/
-  }

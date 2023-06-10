@@ -38,7 +38,6 @@ import { ClienteReadConsultasComponent } from './components/views/cliente/client
 import { ClienteConsultaDetalhadaComponent } from './components/views/cliente/cliente-consulta-detalhada/cliente-consulta-detalhada.component';
 import { LoginComponent } from './components/views/login/login.component';
 import { AgendaUpdateComponent } from './components/views/agenda/agenda-update/agenda-update.component';
-import { FilaReadComponent } from './components/views/fila/fila-read/fila-read.component';
 import { ClienteCreateAgendaComponent } from './components/views/cliente/cliente-create-agenda/cliente-create-agenda.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
 import { AlunoCreateComponent } from './components/views/aluno/aluno-create/aluno-create.component';
@@ -77,6 +76,10 @@ import { ProfessorUpdateComponent } from './components/views/professor/professor
 import { AlunoViewsUpdateComponent } from './components/views/aluno-views/aluno-views-update/aluno-views-update.component';
 import { RecepcaoUpdateComponent } from './components/views/recepcao-views/recepcao-update/recepcao-update.component';
 import { ProfessorEspecialidadeComponent } from './components/views/professor/professor-especialidade/professor-especialidade.component';
+import { EspecialidadCreateComponent } from './components/views/especialidade/especialidad-create/especialidad-create.component';
+import { EspecialidadDeleteComponent } from './components/views/especialidade/especialidad-delete/especialidad-delete.component';
+import { ProfessorEspecialidadeCreateComponent } from './components/views/professor/professor-especialidade-create/professor-especialidade-create.component';
+import { ProfessorEspecialidadeDeleteComponent } from './components/views/professor/professor-especialidade-delete/professor-especialidade-delete.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +97,6 @@ import { ProfessorEspecialidadeComponent } from './components/views/professor/pr
     ClienteConsultaDetalhadaComponent,
     LoginComponent,
     AgendaUpdateComponent,
-    FilaReadComponent,
     ClienteCreateAgendaComponent,
     EspecialidadReadComponent,
     AlunoCreateComponent,
@@ -131,6 +133,10 @@ import { ProfessorEspecialidadeComponent } from './components/views/professor/pr
     AlunoViewsUpdateComponent,
     RecepcaoUpdateComponent,
     ProfessorEspecialidadeComponent,
+    EspecialidadCreateComponent,
+    EspecialidadDeleteComponent,
+    ProfessorEspecialidadeCreateComponent,
+    ProfessorEspecialidadeDeleteComponent,
 
 
   ],

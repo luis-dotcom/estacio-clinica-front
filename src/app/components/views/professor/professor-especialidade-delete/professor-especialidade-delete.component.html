@@ -1,0 +1,22 @@
+<body>
+  <app-professor-header></app-professor-header>
+  <app-footer></app-footer>
+
+  <div class="content">
+
+    <h1>Apagar Especialidade</h1>
+
+  <mat-form-field class="campo_menor">
+    <mat-label><strong>Especialidade</strong></mat-label>
+    <input matInput [(ngModel)]="especialidade.valor"
+    type="text"
+    name="nome" disabled>
+  </mat-form-field>
+</div>
+<div class="content">
+  <button (click)="deletarEspecialidade()" class="mat-elevation-z8" mat-raised-button color="primary">Apagar</button>
+  <button routerLink="/professor/especialidade" class="mat-elevation-z8" mat-raised-button color="warn">Voltar</button>
+</div>
+
+
+</body>
