@@ -17,7 +17,6 @@ import { ClienteReadComponent } from './components/views/cliente/cliente-read-op
 import { ClienteUpdateComponent } from './components/views/cliente/cliente-update/cliente-update.component';
 import { ConsultaCreateComponent } from './components/views/consulta/consulta-create/consulta-create.component';
 import { EspecialidadReadComponent } from './components/views/especialidade/especialidad-read/especialidad-read.component';
-import { FilaReadComponent } from './components/views/fila/fila-read/fila-read.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { LoginComponent } from './components/views/login/login.component';
 import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
@@ -46,6 +45,10 @@ import { ProfessorUpdateComponent } from './components/views/professor/professor
 import { RecepcaoUpdateComponent } from './components/views/recepcao-views/recepcao-update/recepcao-update.component';
 import { ProfessorEspecialidadeComponent } from './components/views/professor/professor-especialidade/professor-especialidade.component';
 import { CanActiveGuard } from './components/views/guard/can-active.guard';
+import { EspecialidadCreateComponent } from './components/views/especialidade/especialidad-create/especialidad-create.component';
+import { EspecialidadDeleteComponent } from './components/views/especialidade/especialidad-delete/especialidad-delete.component';
+import { ProfessorEspecialidadeCreateComponent } from './components/views/professor/professor-especialidade-create/professor-especialidade-create.component';
+import { ProfessorEspecialidadeDeleteComponent } from './components/views/professor/professor-especialidade-delete/professor-especialidade-delete.component';
 
 
 const routes: Routes = [
@@ -95,7 +98,10 @@ const routes: Routes = [
   { path: "agenda", component: AgendaReadComponent, canActivate: [CanActiveGuard]},
   { path: "agenda/update/:id" , component: AgendaUpdateComponent, canActivate: [CanActiveGuard] },
   { path: "especialidade" , component: EspecialidadReadComponent, canActivate: [CanActiveGuard] },
-  { path: "fila" , component: FilaReadComponent, canActivate: [CanActiveGuard] },
+  { path: "especialidade/create" , component: EspecialidadCreateComponent, canActivate: [CanActiveGuard] },
+  { path: "professor/especialidade/create" , component: ProfessorEspecialidadeCreateComponent, canActivate: [CanActiveGuard] },
+  { path: "especialidade/delete/:id" , component: EspecialidadDeleteComponent, canActivate: [CanActiveGuard] },
+  { path: "professor/especialidade/delete/:id" , component: ProfessorEspecialidadeDeleteComponent, canActivate: [CanActiveGuard] },
   { path: '**', component: LoginComponent }
 
 ];

@@ -27,6 +27,7 @@ export class UsuarioCreateComponent implements OnInit {
   };
 
   tipos: TipoPerfil[] = [
+    { valor: 'ADMIN', viewValor: 'ADMIN' },
     { valor: 'ALUNO', viewValor: 'ALUNO' },
     { valor: 'PROFESSOR', viewValor: 'PROFESSOR' },
     { valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA' },

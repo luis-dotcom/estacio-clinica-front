@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(51, 139, 132);
+  background-size: cover;
+}
+
+button {
+  margin-left: 2%;
+}
+
+.content {
+  width: 50%;
+  margin: 2rem auto auto auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.campo_menor {
+  margin-top: 5%;
+  font-weight: bold;
+}
+
+.delete {
+  color: rgb(253, 0, 0);
+}

@@ -34,24 +34,7 @@ export class ProfessorEspecialidadeComponent implements OnInit {
     });
   }
 
-  public criarEspecialidade(): void {
-    this.especialidadeCreate.verValor = this.especialidadeCreate.valor;
-    this.service.criarEspecialidadeService(this.especialidadeCreate).subscribe(
-      (resposta) => {
-        this.service.mensagem('Especialidade adicionado com sucesso!');
-        this.router.navigate(["/home/professor"]);
-      },
-      (err) => {
-        for (let i = 0; i < err.error.errors.length; i++) {
-          this.service.mensagem('Campo Obrigatório!');
-        }
-      }
-    );
-  }
-  public deletarEspecialidade(id: any): void {
-    this.service.deleteEspecialidadeService(id).subscribe((reposta) => {
-      this.service.mensagem("Especialidade Deletada com Sucesso!");
-      this.router.navigate(["/home/professor"]);
-    });
+  public navegarEspecialidadeCreate(): void {
+    this.router.navigate(['/professor/especialidade/create'])
   }
 }

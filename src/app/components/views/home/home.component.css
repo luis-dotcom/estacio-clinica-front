@@ -5,7 +5,17 @@
     margin-top: 1rem;
     padding-left: 2rem;
     font-size: 1.2rem;
-    background-color: rgb(115, 186, 228);
+    background-color: rgb(51, 139, 132);
+}
+
+
+@keyframes go-back {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @media(max-width: 450px) {
@@ -19,19 +29,29 @@
   }
 }
 
-img {
+p {
   margin-top: 20px;
-  max-width: 300px;
-  margin-left: 30px;
+
+  margin-left: 50px;
+}
+
+img {
+  height: 80%;
+  margin-top: 20px;
+  max-width: 350px;
+  margin-left: 50px;
   border-radius: 10px;
   color: white;
   box-shadow: 0, 0px 0px blue;
   text-align: center;
   transition: all 0.5s ease-in-out;
-
 }
 
+
+
 .example-card {
+  margin-top: 50px;
   max-width: 200px;
+  animation: go-back 5s backwards;
 }
 
