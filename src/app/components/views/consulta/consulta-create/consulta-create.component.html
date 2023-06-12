@@ -24,56 +24,69 @@
     <mat-form-field class="data">
           <mat-label>Data Consulta</mat-label>
           <input matInput [(ngModel)]="consulta.dataConsulta"
-          type="date"
-          name="dataConsulta"required>
+          type="text"
+          name="dataConsulta" disabled>
         </mat-form-field>
+
 
         <mat-form-field class="campo_textarea">
             <mat-label>Diagnostico</mat-label>
-            <textarea matInput [(ngModel)]="consulta.queixas"
+            <textarea matInput #queixas [(ngModel)]="consulta.queixas"
             type="text"
             name="queixas"
+            rows="10"
             ></textarea>
+            <mat-hint align="end">{{queixas.value.length}} / 1000</mat-hint>
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
             <mat-label>Medicação</mat-label>
-            <textarea matInput [(ngModel)]="consulta.plano"
+            <textarea matInput #plano [(ngModel)]="consulta.plano"
             type="text"
               name="plano"
+              rows="10"
             ></textarea>
+            <mat-hint align="end">{{plano.value.length}} / 1000</mat-hint>
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
             <mat-label>Avaliação Médica</mat-label>
-            <textarea matInput [(ngModel)]="consulta.avaliacao"
+            <textarea matInput #avaliacao [(ngModel)]="consulta.avaliacao"
               type="text"
+              rows="10"
               name="avaliacao"
               ></textarea>
+              <mat-hint align="end">{{avaliacao.value.length}} / 1000</mat-hint>
             </mat-form-field>
 
             <mat-form-field class="campo_textarea">
               <mat-label>Exames</mat-label>
-              <textarea matInput [(ngModel)]="consulta.exames"
+              <textarea matInput #exames [(ngModel)]="consulta.exames"
               type="text"
+              rows="10"
               name="queixas"
             ></textarea>
+            <mat-hint align="end">{{exames.value.length}} / 1000</mat-hint>
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
             <mat-label>Encaminhamento</mat-label>
-            <textarea matInput [(ngModel)]="consulta.encaminhamento"
+            <textarea matInput #encaminhamento [(ngModel)]="consulta.encaminhamento"
             type="text"
+            rows="10"
             name="encaminhamento"
             ></textarea>
+            <mat-hint align="end">{{encaminhamento.value.length}} / 1000</mat-hint>
           </mat-form-field>
 
           <mat-form-field class="campo_textarea">
             <mat-label>Observação</mat-label>
-            <textarea matInput [(ngModel)]="consulta.observacao"
+            <textarea matInput #observacao [(ngModel)]="consulta.observacao"
             type="text"
-            name="observacao"
-            ></textarea>
+            rows="10"
+            name="observacao">
+          </textarea>
+            <mat-hint align="end">{{observacao.value.length}} / 1000</mat-hint>
           </mat-form-field>
 
           <div class="buttons">

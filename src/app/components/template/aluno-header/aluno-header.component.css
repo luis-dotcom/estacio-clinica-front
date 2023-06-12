@@ -6,6 +6,7 @@ img {
 .header {
   display: flex;
   justify-content: space-between;
+  background-image: linear-gradient(45deg, rgba(196, 224, 226, 0.603), rgba(144, 201, 180, 0.603));
 }
 
 span {

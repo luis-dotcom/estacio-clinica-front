@@ -25,6 +25,15 @@ export class ConsultaCreateComponent implements OnInit{
 
   id_cliente: string = "";
   nome!: String
+
+  data = new Date();
+  dia = String(this.data.getDate()).padStart(2, '0');
+  mes = String(this.data.getMonth() + 1).padStart(2, '0');
+  ano = this.data.getFullYear();
+  dataAtual = `${this.dia}/${this.mes}/${this.ano}`
+  dataConvertida : string = String(this.dataAtual);
+
+
  constructor(
     private serviceConsulta: ConsultaService,
     private serviceCliente: ClienteService,
@@ -36,6 +45,7 @@ export class ConsultaCreateComponent implements OnInit{
     this.id_cliente = this.route.snapshot.paramMap.get("id_cliente")!;
     this.nome = this.route.snapshot.paramMap.get("nome")!;
     this.buscarNome();
+    this.consulta.dataConsulta = this.dataConvertida;
   }
 
   buscarNome (): void{
@@ -46,6 +56,7 @@ export class ConsultaCreateComponent implements OnInit{
 
 
   public criarConsulta(): void {
+    this.consulta.dataConsulta = this.dataConvertida;
     this.serviceConsulta.criarConsultaService(this.id_cliente, this.consulta).subscribe(
       (resposta) => {
         this.router.navigate(["clientes/" + this.id_cliente + "/consultas"]);

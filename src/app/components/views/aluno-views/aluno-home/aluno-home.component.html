@@ -1,23 +1,58 @@
-
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
 <app-aluno-header></app-aluno-header>
 
 <mat-card class="home mat-elevation-z4">
   <mat-card-title class="title">Bem vindo! </mat-card-title>
-  <mat-card-subtitle class="subtitle">Sistema de Informações Clínicas</mat-card-subtitle>
+  <mat-card-subtitle class="subtitle"
+    >Sistema de Informações Clínicas</mat-card-subtitle
+  >
 </mat-card>
 
-<mat-card-title-group class="example-card">
-  <img mat-card-image src="assets/imagem/imagemHome_1.png" alt="">
-  <img mat-card-image src="assets/imagem/imagemHome_2.png" alt="">
-  <img mat-card-image src="assets/imagem/imagemHome_3.png" alt="">
-  <img mat-card-image src="assets/imagem/imagemHome_4.png" alt="">
-</mat-card-title-group>
-
-<mat-card-title-group class="example-card">
-  <img mat-card-image src="assets/imagem/imagemHome_5.jpg" alt="">
-  <img mat-card-image src="assets/imagem/imagemHome_6.webp" alt="">
-  <img mat-card-image src="assets/imagem/imagemHome_7.jpeg" alt="">
-  <img mat-card-image src="assets/imagem/imagemHome_8.jpeg" alt="">
-</mat-card-title-group>
-
+<div class="container">
+  <div class="card">
+    <img class="mar" src="assets/imagem/imagemHome_3.png" />
+    <div class="textos">
+      <h1>NUTRIÇÃO</h1>
+      <p>
+        “Sem uma dieta adequada, a medicina não adianta. Com dieta adequada, os
+        medicamentos não são necessários.” – Provérbio Ayurvédico
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="mar" src="assets/imagem/imagemHome_6.webp" />
+    <div class="textos">
+      <h1>SAÚDE</h1>
+      <p>
+        “Unir-se é um bom começo, manter a união é um progresso, e trabalhar em
+        conjunto é a vitória.” - Henry Ford
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="mar" src="assets/imagem/imagemHome_9.png" />
+    <div class="textos">
+      <h1>FISIOTERAPIA</h1>
+      <p>
+        “O fisioterapeuta é um profissional da área da saúde que avalia lesões
+        de pacientes e, a partir de seu diagnóstico funcional ou
+        fisioterapêutico, aplica e gerencia um tratamento utilizando meios
+        físicos.”
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="mar" src="assets/imagem/imagemHome_8.jpeg" />
+    <div class="textos">
+      <h1>ENFERMAGEM</h1>
+      <p>
+        “A Enfermagem é a ciência do saber cuidar. Envolve -se com os mais
+        nobres sentimentos: compaixão, proteção e amor.” - Nino Carneiro.
+      </p>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>

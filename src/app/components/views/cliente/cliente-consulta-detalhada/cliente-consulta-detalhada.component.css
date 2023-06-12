@@ -7,10 +7,6 @@ img {
   text-align: center;
 }
 
-.centralizar{
-  text-align: center;
-}
-
 .tituloColuna{
   text-transform: uppercase;
   font-weight: bolder;
@@ -30,7 +26,36 @@ img {
   margin-right: 3px;
 }
 
+.dados_cliente {
+  display: flex;
+}
 
+.dados_a {
+  width: 50%;
+  padding-left: 30px;
+}
+
+.dados_b {
+  width: 50%;
+  padding-left: 30px;
+}
+
+.dados_c {
+  display: flex;
+  width: 28%;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  background-color: white;
+  border-radius: 10px 10px 10px;
+}
+
+.assinaturas {
+  text-align: center;
+}
 
 -- retirar botoes da impresao --
 .only-print{

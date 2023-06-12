@@ -28,7 +28,15 @@ export class ProfessorCreateConsultasComponent implements OnInit{
   nomeCliente!: string
   id_usuario!: string ;
   nomeUsuario!: string;
-  matricula!: string
+  matricula!: string;
+
+  data = new Date();
+  dia = String(this.data.getDate()).padStart(2, '0');
+  mes = String(this.data.getMonth() + 1).padStart(2, '0');
+  ano = this.data.getFullYear();
+  dataAtual = `${this.dia}/${this.mes}/${this.ano}`
+  dataConvertida : string = String(this.dataAtual);
+
  constructor(
     private serviceConsulta: ConsultaService,
     private serviceCliente: ClienteService,
@@ -41,6 +49,7 @@ export class ProfessorCreateConsultasComponent implements OnInit{
     this.id_usuario = this.service.usuario && this.service.usuario.id ?  this.service.usuario.id : '';
     this.id_cliente = this.route.snapshot.paramMap.get("id_cliente")!;
     this.nomeCliente = this.route.snapshot.paramMap.get("nome")!;
+    this.consulta.dataConsulta = this.dataConvertida;
     this.buscarNomeCliente();
     this.buscarNomeUsuario();
   }
@@ -60,6 +69,7 @@ export class ProfessorCreateConsultasComponent implements OnInit{
 
 
   public criarConsulta(): void {
+    this.consulta.dataConsulta = this.dataConvertida;
     this.consulta.matricula = this.matricula;
     this.consulta.nomeAtendente = this.nomeUsuario;
     this.serviceConsulta.criarConsultaService(this.id_cliente, this.consulta).subscribe(

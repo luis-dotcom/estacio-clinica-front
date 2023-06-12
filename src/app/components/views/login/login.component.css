@@ -9,14 +9,12 @@ span {
   align-items: center;
 }
 
-.text{
-  font-size: 2rem;
-  padding-left: 1%;
+.text {
+  font-size: 45px;
   text-align: center;
-  font-family: Poppins,sans-serif;
   font-weight: bold;
   color: black;
-
+  font-family: Poppins,sans-serif;
 }
 
 .conteudo-login {

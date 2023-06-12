@@ -1,11 +1,11 @@
-import { Agenda } from '../../../models/agenda.modelo';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AgendaService } from '../../../services/agenda.service';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { ClienteService } from '../../../services/cliente.service';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { Agenda } from '../../../models/agenda.modelo';
 import { Cliente } from '../../../models/cliente.modelo';
+import { AgendaService } from '../../../services/agenda.service';
+import { ClienteService } from '../../../services/cliente.service';
 
 @Component({
   selector: 'app-agenda-read',
@@ -13,6 +13,8 @@ import { Cliente } from '../../../models/cliente.modelo';
   styleUrls: ['./agenda-read.component.css'],
 })
 export class AgendaReadComponent implements OnInit {
+
+
   displayedColumns: string[] = [
     'nome',
     'cpf',

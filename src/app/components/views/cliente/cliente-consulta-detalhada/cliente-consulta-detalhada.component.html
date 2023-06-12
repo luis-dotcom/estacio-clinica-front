@@ -1,64 +1,81 @@
-<h1></h1>
-<form>
-  <form>
-    <button
-      type="reset"
-      (click)="navegarParaListaConsultas()"
-      class="button no-print"
-      mat-stroked-button
-      color="warn"
-    >
-      <mat-icon>keyboard_return</mat-icon>
-    </button>
+<button
+  type="reset"
+  (click)="navegarParaListaConsultas()"
+  class="button no-print"
+  mat-stroked-buttoncolor="warn"
+>
+  <mat-icon>keyboard_return</mat-icon>
+</button>
 
-    <button
-      class="botaoImprimir no-print"
-      onclick="window.print()"
-      mat-fab
-      extended
-      color="primary"
-    >
-      <mat-icon>download</mat-icon> Imprimir
-    </button>
-    <div>
-      <img src="assets/imagem/estacio-logo.png" alt="" />
-    </div>
-    <div class="cabecalho">
-      <h2>Estácio Clinica</h2>
-      <h1>Relatorio de Consulta</h1>
-    </div>
+<button
+  class="botaoImprimir no-print"
+  onclick="window.print()"
+  mat-fab
+  extended
+  color="primary"
+>
+  <mat-icon>download</mat-icon> Imprimir
+</button>
 
-  <pre class="centralizar">
-    Nome do Paciente:{{ cliente.nome }}  Data de Nascimento: {{ cliente.dataNascimento }}
-    Endereço:{{ cliente.endereco }}  Cidade: {{ cliente.cidade }}
-    Nome da Mãe:{{ cliente.nomeMae }}  Telefone: {{ cliente.telefone }}
-    Email:{{ cliente.email }}  CPF: {{ cliente.cpf }}
-    Naturalidade:{{ cliente.naturalidade }}  Sexo: {{ cliente.sexo }}
-  </pre>
-
-  <table class="tableConsulta" border="2" >
-    <tr class="tituloColuna">
-      <td>Queixas</td>
-      <td>Plano</td>
-      <td>Avaliação</td>
-      <td>Encaminhamento</td>
-      <td>Observação</td>
-    </tr>
-    <tr>
-      <td>{{ consulta.queixas }}</td>
-      <td>{{ consulta.plano }}</td>
-      <td>{{ consulta.avaliacao }}</td>
-      <td>{{ consulta.encaminhamento }}</td>
-      <td>{{ consulta.observacao }}</td>
-
-    </tr>
-  </table>
-
-  <div class="centralizar">
-    <p>________________________________________________</p>
-    <p>{{ consulta.nomeAtendente }}, matrícula:{{ consulta.matricula }}</p>
-    <p>________________________________________________</p>
-    <p>professor</p>
+<div class="container_impressao">
+  <div>
+    <img src="assets/imagem/estacio-logo.png" alt="" />
   </div>
-  </form>
-</form>
+
+  <div class="cabecalho">
+    <h2>Clínica Estácio</h2>
+    <h1>Relatório de Consulta</h1>
+  </div>
+
+  <div class="dados_cliente">
+    <div class="dados_a">
+      <p><strong>Paciente:</strong> {{ cliente.nome }}</p>
+      <p><strong>Endereço:</strong> {{ cliente.endereco }}</p>
+      <p><strong>E-mail:</strong> {{ cliente.email }}</p>
+      <p><strong>Mãe:</strong> {{ cliente.nomeMae }}</p>
+      <p><strong>CPF:</strong> {{ cliente.cpf }}</p>
+      <p><strong>Gênero:</strong> {{ cliente.sexo }}</p>
+    </div>
+    <div class="dados_b">
+      <p><strong>Data de Nasc.:</strong> {{ cliente.dataNascimento }}</p>
+      <p><strong>Cidade:</strong> {{ cliente.cidade }}</p>
+      <p><strong>Bairro:</strong> {{ cliente.bairro }}</p>
+      <p><strong>Naturalidade:</strong> {{ cliente.naturalidade }}</p>
+      <p><strong>Telefone:</strong> {{ cliente.telefone }}</p>
+    </div>
+  </div>
+
+  <p class="assinaturas"><strong>Data da Consulta:</strong> {{ consulta.dataConsulta }}</p>
+
+  <div class="dados_cliente">
+    <div class="dados_c">
+      <textarea rows="10" wrap="hard" cols="100" disabled>Diaginostico: {{ consulta.queixas }}</textarea>
+    </div>
+    <div class="dados_c">
+      <textarea rows="10" wrap="hard" cols="100" disabled>Medicação: {{ consulta.plano }}</textarea>
+    </div>
+    <div class="dados_c">
+      <textarea rows="10" wrap="hard" cols="100" disabled>Avaliação Médica: {{ consulta.avaliacao }}</textarea>
+    </div>
+  </div>
+  <div class="dados_cliente">
+    <div class="dados_c">
+      <textarea rows="10" wrap="hard" cols="100" disabled>Exames: {{ consulta.exames }}</textarea>
+    </div>
+    <div class="dados_c">
+      <textarea rows="10" wrap="hard" cols="100" disabled>Encaminhamento: {{ consulta.encaminhamento }}</textarea>
+    </div>
+    <div class="dados_c">
+      <textarea rows="10" wrap="hard" cols="100" disabled>Observação: {{ consulta.observacao }}</textarea>
+    </div>
+  </div>
+
+  <div class="assinaturas">
+    <p>________________________________________________</p>
+    <p>
+      Aluno: {{ consulta.nomeAtendente }}, matrícula:{{ consulta.matricula }}
+    </p>
+    <p>________________________________________________</p>
+    <p>Professor Responsálvel</p>
+  </div>
+</div>

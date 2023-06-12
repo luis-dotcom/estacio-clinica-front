@@ -5,6 +5,7 @@
 
 h1 {
   text-align: center;
+  font-family: Poppins,sans-serif;
 }
 
 button {
@@ -18,6 +19,8 @@ margin-bottom: 10px;
 }
 
 body {
-  background-color:rgb(51, 139, 132);
+  background-image: linear-gradient(
+    45deg, rgb(32, 177, 187), rgb(32, 187, 135)
+  );
   background-size: cover;
 }

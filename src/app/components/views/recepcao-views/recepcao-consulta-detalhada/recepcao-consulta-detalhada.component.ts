@@ -81,6 +81,7 @@ export class RecepcaoConsultaDetalhadaComponent implements OnInit{
       this.cliente.naturalidade = resposta.naturalidade;
       this.cliente.endereco = resposta.endereco;
       this.cliente.cidade = resposta.cidade;
+      this.cliente.bairro = resposta.bairro;
     });
   }
 
