@@ -6,11 +6,11 @@ import { ConsultaService } from 'src/app/components/services/consulta.service';
 import { UsuarioService } from 'src/app/components/services/usuario.service';
 
 @Component({
-  selector: 'app-aluno-create-consulta',
-  templateUrl: './aluno-create-consulta.component.html',
-  styleUrls: ['./aluno-create-consulta.component.css']
+  selector: 'app-professor-create-consultas',
+  templateUrl: './professor-create-consultas.component.html',
+  styleUrls: ['./professor-create-consultas.component.css']
 })
-export class AlunoCreateConsultaComponent implements OnInit{
+export class ProfessorCreateConsultasComponent implements OnInit{
 
   consulta: Consulta = {
     matricula: "",
@@ -28,7 +28,7 @@ export class AlunoCreateConsultaComponent implements OnInit{
   nomeCliente!: string
   id_usuario!: string ;
   nomeUsuario!: string;
-  matricula!: string
+  matricula!: string;
 
   data = new Date();
   dia = String(this.data.getDate()).padStart(2, '0');
@@ -74,12 +74,12 @@ export class AlunoCreateConsultaComponent implements OnInit{
     this.consulta.nomeAtendente = this.nomeUsuario;
     this.serviceConsulta.criarConsultaService(this.id_cliente, this.consulta).subscribe(
       (resposta) => {
-        this.router.navigate(["aluno/clientes/" + this.id_cliente + "/consultas"]);
+        this.router.navigate(["professor/clientes/" + this.id_cliente + "/consultas"]);
         this.serviceConsulta.mensagem("Consulta adicionada com sucesso!");
       })
   }
 
   public navegarParaListaConsultas(): void {
-    this.router.navigate(["aluno/clientes/" + this.id_cliente + "/consultas"]);
+    this.router.navigate(["professor/clientes/" + this.id_cliente + "/consultas"]);
   }
 }

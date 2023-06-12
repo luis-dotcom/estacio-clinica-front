@@ -8,11 +8,11 @@ import { AgendaService } from 'src/app/components/services/agenda.service';
 import { ClienteService } from 'src/app/components/services/cliente.service';
 
 @Component({
-  selector: 'app-aluno-read-agenda',
-  templateUrl: './aluno-read-agenda.component.html',
-  styleUrls: ['./aluno-read-agenda.component.css']
+  selector: 'app-professor-read-agenda',
+  templateUrl: './professor-read-agenda.component.html',
+  styleUrls: ['./professor-read-agenda.component.css']
 })
-export class AlunoReadAgendaComponent implements OnInit{
+export class ProfessorReadAgendaComponent implements OnInit {
 
   displayedColumns: string[] = [
     'nome',
@@ -60,7 +60,7 @@ export class AlunoReadAgendaComponent implements OnInit{
     this.serviceCliente.buscarPorCpf(cpf).subscribe((resposta) => {
       this.cliente = resposta;
      if(this.cliente != null){
-       this.router.navigate(['aluno/clientes/' + this.cliente.id + '/consultas']);
+       this.router.navigate(['professor/clientes/' + this.cliente.id + '/consultas']);
        this.serviceAgenda.mensagemAlerta('O paciente não poderá ser atendido, em hipótese alguma, sem a apresentação de documento de indentificação ou encaminhamento médico!');
       } else {
         this.serviceAgenda.mensagem('Paciente não encontrado!');

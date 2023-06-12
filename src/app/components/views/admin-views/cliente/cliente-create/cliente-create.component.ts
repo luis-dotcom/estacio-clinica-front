@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Cliente } from 'src/app/components/models/cliente.modelo';
-import { ClienteService } from 'src/app/components/services/cliente.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { Cliente } from "src/app/components/models/cliente.modelo";
+import { ClienteService } from "src/app/components/services/cliente.service";
 
-interface Genero {
+
+interface Sexo {
   valor: string;
   viewValor: string;
 }
 
 @Component({
-  selector: 'app-recepcao-create-cliente',
-  templateUrl: './recepcao-create-cliente.component.html',
-  styleUrls: ['./recepcao-create-cliente.component.css']
+  selector: "app-cliente-create",
+  templateUrl: "./cliente-create.component.html",
+  styleUrls: ["./cliente-create.component.css"],
 })
-export class RecepcaoCreateClienteComponent implements OnInit{
+export class ClienteCreateComponent implements OnInit{
 
-  tipoSexo: Genero[] = [
+  tipoSexo: Sexo[] = [
     { valor: 'Masculino', viewValor: 'Masculino' },
     { valor: 'Feminino', viewValor: 'Feminino' },
     { valor: 'Prefiro não dizer', viewValor: 'Prefiro não dizer' },
@@ -43,7 +44,7 @@ export class RecepcaoCreateClienteComponent implements OnInit{
   public criarCliente(): void {
     this.service.criarClienteService(this.cliente).subscribe(
       (resposta) => {
-        this.router.navigate(["recepcao/clientes"]);
+        this.router.navigate(["clientes"]);
         this.service.mensagem("Cadastro adicionado com sucesso!");
       },
       (err) => {
@@ -55,6 +56,6 @@ export class RecepcaoCreateClienteComponent implements OnInit{
   }
 
   public navegarParaListaClientes() {
-    this.router.navigate(["recepcao/clientes"]);
+    this.router.navigate(["clientes"]);
   }
 }

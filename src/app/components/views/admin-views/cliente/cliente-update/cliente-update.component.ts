@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from 'src/app/components/models/cliente.modelo';
 import { ClienteService } from 'src/app/components/services/cliente.service';
+
 
 interface Sexo {
   valor: string;
@@ -9,11 +10,11 @@ interface Sexo {
 }
 
 @Component({
-  selector: 'app-recepcao-update-cliente',
-  templateUrl: './recepcao-update-cliente.component.html',
-  styleUrls: ['./recepcao-update-cliente.component.css']
+  selector: 'app-cliente-update',
+  templateUrl: './cliente-update.component.html',
+  styleUrls: ['./cliente-update.component.css']
 })
-export class RecepcaoUpdateClienteComponent implements OnInit {
+export class ClienteUpdateComponent implements OnInit{
 
   tipoSexo: Sexo[] = [
     { valor: 'Masculino', viewValor: 'Masculino' },
@@ -65,7 +66,7 @@ export class RecepcaoUpdateClienteComponent implements OnInit {
 
   public atualizarCliente(): void {
      this.service.updateClienteService(this.cliente).subscribe((resposta) => {
-      this.router.navigate(["recepcao/clientes"]);
+      this.router.navigate(["clientes"]);
       this.service.mensagem("Cadastro atualizado com sucesso!")
      }, err => {
       this.service.mensagem("Validar se todos os campos estão preenchidos corretamente!")
@@ -73,6 +74,6 @@ export class RecepcaoUpdateClienteComponent implements OnInit {
   }
 
   public navegarParaListaClientes(){
-    this.router.navigate(["recepcao/clientes"]);
+    this.router.navigate(["clientes"]);
   }
 }

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Aluno } from 'src/app/components/models/aluno.modelo';
-import { Especialidade } from 'src/app/components/models/especialidade.modelo';
-import { EspecialidadeService } from 'src/app/components/services/especialidade.service';
-import { AlunoService } from 'src/app/components/services/service.service';
+import { Component } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
+import { Aluno } from "src/app/components/models/aluno.modelo";
+import { Especialidade } from "src/app/components/models/especialidade.modelo";
+import { EspecialidadeService } from "src/app/components/services/especialidade.service";
+import { AlunoService } from "src/app/components/services/service.service";
+
 
 interface TipoPerfil {
   valor: string;
@@ -11,12 +12,11 @@ interface TipoPerfil {
 }
 
 @Component({
-  selector: 'app-aluno-views-update',
-  templateUrl: './aluno-views-update.component.html',
-  styleUrls: ['./aluno-views-update.component.css']
+  selector: 'app-aluno-update',
+  templateUrl: './aluno-update.component.html',
+  styleUrls: ['./aluno-update.component.css'],
 })
-export class AlunoViewsUpdateComponent implements OnInit{
-
+export class AlunoUpdateComponent {
   aluno: Aluno = {
     matricula: '',
     nome: '',
@@ -29,7 +29,6 @@ export class AlunoViewsUpdateComponent implements OnInit{
     telefone: '',
   };
 
-  hide = true;
   selects: Especialidade[] = [];
   tipos: TipoPerfil[] = [{ valor: 'ALUNO', viewValor: 'ALUNO' }];
 
@@ -69,7 +68,7 @@ export class AlunoViewsUpdateComponent implements OnInit{
   public atualizarAluno(): void {
     this.service.updateAlunoService(this.aluno).subscribe(
       (resposta) => {
-        this.router.navigate(['/home/aluno']);
+        this.router.navigate(['alunos']);
         this.service.mensagem('Cadastro atualizado com sucesso!');
       },
       (err) => {
@@ -80,7 +79,7 @@ export class AlunoViewsUpdateComponent implements OnInit{
     );
   }
 
-  public navegarParaHomeAluno() {
-    this.router.navigate(['/home/aluno']);
+  public navegarParaListaAlunos() {
+    this.router.navigate(['alunos']);
   }
 }

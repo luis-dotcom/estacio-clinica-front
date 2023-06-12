@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Usuario } from 'src/app/components/models/usuario.modelo';
 import { UsuarioService } from 'src/app/components/services/usuario.service';
 
 @Component({
-  selector: 'app-recepcao-update',
-  templateUrl: './recepcao-update.component.html',
-  styleUrls: ['./recepcao-update.component.css']
+  selector: 'app-professor-update',
+  templateUrl: './professor-update.component.html',
+  styleUrls: ['./professor-update.component.css']
 })
-export class RecepcaoUpdateComponent implements OnInit{
+export class ProfessorUpdateComponent {
 
   usuario: Usuario = {
     matricula: "",
@@ -49,7 +49,7 @@ export class RecepcaoUpdateComponent implements OnInit{
 
   public atualizarUsuario(): void {
      this.service.updateUsuarioService(this.usuario).subscribe((resposta) => {
-      this.router.navigate(["/home/recepcao"]);
+      this.router.navigate(["/home/professor"]);
       this.service.mensagem("Cadastro atualizado com sucesso!")
      }, err => {
       this.service.mensagem("Validar se todos os campos estão preenchidos corretamente!")
@@ -57,6 +57,6 @@ export class RecepcaoUpdateComponent implements OnInit{
   }
 
   public navegarParaListaUsuarios(){
-    this.router.navigate(["/home/recepcao"]);
+    this.router.navigate(["/home/professor"]);
   }
 }

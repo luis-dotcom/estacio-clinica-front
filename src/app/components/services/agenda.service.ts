@@ -48,4 +48,12 @@ export class AgendaService {
       duration: 5000,
     });
   }
+
+  public mensagemAlerta(msg: string): void {
+    this._snack.open(msg, 'ok', {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      duration: 10000,
+    });
+  }
 }

@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Agenda } from 'src/app/components/models/agenda.modelo';
-import { Cliente } from 'src/app/components/models/cliente.modelo';
-import { Especialidade } from 'src/app/components/models/especialidade.modelo';
-import { AgendaService } from 'src/app/components/services/agenda.service';
-import { ClienteService } from 'src/app/components/services/cliente.service';
-import { EspecialidadeService } from 'src/app/components/services/especialidade.service';
+import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
+import { Agenda } from "src/app/components/models/agenda.modelo";
+import { Cliente } from "src/app/components/models/cliente.modelo";
+import { Especialidade } from "src/app/components/models/especialidade.modelo";
+import { AgendaService } from "src/app/components/services/agenda.service";
+import { ClienteService } from "src/app/components/services/cliente.service";
+import { EspecialidadeService } from "src/app/components/services/especialidade.service";
+
 
 @Component({
-  selector: 'app-recepcao-create-agenda',
-  templateUrl: './recepcao-create-agenda.component.html',
-  styleUrls: ['./recepcao-create-agenda.component.css']
+  selector: 'app-cliente-create-agenda',
+  templateUrl: './cliente-create-agenda.component.html',
+  styleUrls: ['./cliente-create-agenda.component.css'],
 })
-export class RecepcaoCreateAgendaComponent implements OnInit{
+export class ClienteCreateAgendaComponent implements OnInit {
+
 
   cliente: Cliente = {
     nome: '',
@@ -66,7 +68,7 @@ export class RecepcaoCreateAgendaComponent implements OnInit{
     this.agenda.cpf = this.cliente.cpf;
     this.serviceAgen.criarAgendaService(this.cliente.id! ,this.agenda).subscribe(
       (resposta) => {
-        this.router.navigate(['recepcao/agenda']);
+        this.router.navigate(['agenda']);
         this.serviceAgen.mensagem('Agendamento adicionado com sucesso!');
       },
       (err) => {

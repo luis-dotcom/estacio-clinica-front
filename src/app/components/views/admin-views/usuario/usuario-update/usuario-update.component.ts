@@ -3,12 +3,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Usuario } from 'src/app/components/models/usuario.modelo';
 import { UsuarioService } from 'src/app/components/services/usuario.service';
 
+
+interface TipoPerfil {
+  valor: string;
+  viewValor: string;
+}
+
 @Component({
-  selector: 'app-recepcao-update',
-  templateUrl: './recepcao-update.component.html',
-  styleUrls: ['./recepcao-update.component.css']
+  selector: 'app-usuario-update',
+  templateUrl: './usuario-update.component.html',
+  styleUrls: ['./usuario-update.component.css']
 })
-export class RecepcaoUpdateComponent implements OnInit{
+export class UsuarioUpdateComponent implements OnInit{
 
   usuario: Usuario = {
     matricula: "",
@@ -21,7 +27,11 @@ export class RecepcaoUpdateComponent implements OnInit{
     telefone:''
     };
 
-    hide = true;
+  tipos: TipoPerfil[] = [
+    {valor: 'ALUNO', viewValor: 'ALUNO'},
+    {valor: 'PROFESSOR', viewValor: 'PROFESSOR'},
+    {valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA'},
+  ];
 
   constructor(
     private service: UsuarioService,
@@ -49,7 +59,7 @@ export class RecepcaoUpdateComponent implements OnInit{
 
   public atualizarUsuario(): void {
      this.service.updateUsuarioService(this.usuario).subscribe((resposta) => {
-      this.router.navigate(["/home/recepcao"]);
+      this.router.navigate(["usuarios"]);
       this.service.mensagem("Cadastro atualizado com sucesso!")
      }, err => {
       this.service.mensagem("Validar se todos os campos estão preenchidos corretamente!")
@@ -57,6 +67,6 @@ export class RecepcaoUpdateComponent implements OnInit{
   }
 
   public navegarParaListaUsuarios(){
-    this.router.navigate(["/home/recepcao"]);
+    this.router.navigate(["usuarios"]);
   }
 }
