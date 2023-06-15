@@ -36,6 +36,7 @@ export class ClienteCreateAgendaComponent implements OnInit {
     cpf: '',
     especialidade: '',
     nomeAluno: '',
+    presenca: false
   };
 
   selects: Especialidade[] = [];

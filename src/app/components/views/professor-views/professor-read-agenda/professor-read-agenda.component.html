@@ -8,7 +8,7 @@
 
     <mat-form-field class="mat-mdc-form-field no-print">
       <mat-label>Filtro</mat-label>
-      <input class="no-print" matInput [(ngModel)]="cpf" (keyup)="applyFilter($event)" #input>
+      <input class="no-print" matInput (keyup)="applyFilter($event)" #input>
     </mat-form-field>
 
     <a class="total no-print">Total de agendamentos:  {{ qtdAgendadas }}</a>

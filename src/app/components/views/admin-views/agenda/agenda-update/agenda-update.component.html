@@ -42,18 +42,18 @@
 
   <mat-form-field class="campo_menor">
     <mat-label>Especialidade</mat-label>
-    <mat-select [(ngModel)]="agenda.especialidade" name="especialidade">
+    <mat-select [(ngModel)]="agenda.especialidade" name="especialidade" disabled>
       <mat-option *ngFor="let select of especialidades" [value]="select.valor">
         {{ select.verValor }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field class="campo_menor">
+  <mat-form-field class="campo_maior">
     <mat-label>Aluno</mat-label>
     <mat-select [(ngModel)]="agenda.nomeAluno" name="nomeAluno">
-      <mat-option *ngFor="let select of alunos" [value]="select.nome">
-        {{ select.nome }}
+      <mat-option class="capitalize" *ngFor="let select of alunos" [value]="select.nome">
+        {{ select.nome }}, ({{ select.curso }})
       </mat-option>
     </mat-select>
   </mat-form-field>

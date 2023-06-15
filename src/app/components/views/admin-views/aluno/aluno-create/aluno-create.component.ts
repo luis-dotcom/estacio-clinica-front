@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Aluno } from 'src/app/components/models/aluno.modelo';
 import { Especialidade } from 'src/app/components/models/especialidade.modelo';
 import { EspecialidadeService } from 'src/app/components/services/especialidade.service';
-import { AlunoService } from 'src/app/components/services/service.service';
+import { AlunoService } from 'src/app/components/services/aluno.service';
 
 
 interface TipoPerfil {

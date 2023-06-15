@@ -15,6 +15,10 @@ export class AlunoService {
     return this.http.get("http://localhost:8086/aluno");
   }
 
+  public listarAlunoPorCurso(curso: String): Observable<any>{
+    return this.http.get("http://localhost:8086/aluno/curso/"+curso);
+  }
+
   public criarAlunoService(aluno: Aluno): Observable<Aluno> {
     return this.http.post<Aluno>("http://localhost:8086/aluno",aluno);
   }
