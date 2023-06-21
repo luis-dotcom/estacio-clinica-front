@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
               this.usuario = resposta;
               this.service.usuario = resposta;
               if (resposta != null) {
-                if (this.usuario.tipoPerfil === 'ADMIN') {
+                if (this.usuario.tipoPerfil === 'ADMINISTRADOR') {
                   this.router.navigate(['/home']);
                 } else if (this.usuario.tipoPerfil === 'ALUNO') {
                   this.router.navigate(['/home/aluno']);

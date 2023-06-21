@@ -43,7 +43,7 @@
 
   <mat-form-field class="campo_menor">
     <mat-label>CPF</mat-label>
-    <input matInput #input maxlength="11" minlength="11" type="number" [(ngModel)]="aluno.cpf" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    <input matInput #input maxlength="11" minlength="11" type="text" [(ngModel)]="aluno.cpf"
     name="cpf"
     placeholder="Ex: 12345678901" required/>
   </mat-form-field>
