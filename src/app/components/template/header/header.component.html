@@ -5,8 +5,8 @@
   </span>
   <div class="icons">
 
-    <label><mat-icon>person</mat-icon></label>
-    <p>{{ nome }}</p>
+    <label ><mat-icon>person</mat-icon></label>
+    <p>{{nome}}</p>
 
     <button class="menu" mat-icon-button [matMenuTriggerFor]="opcoes"><mat-icon class="iconeMenu" >menu</mat-icon></button>
     <mat-menu #opcoes="matMenu">
@@ -18,4 +18,5 @@
       <button mat-menu-item routerLink=""><mat-icon>exit_to_app</mat-icon>Sair</button>
     </mat-menu>
   </div>
+
 </mat-toolbar>
