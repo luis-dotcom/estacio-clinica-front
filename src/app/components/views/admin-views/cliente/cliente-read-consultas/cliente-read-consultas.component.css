@@ -16,7 +16,9 @@ h1 {
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
 }
-
+.table {
+  width: 50%;
+}
 .consultas {
   color: rgba(196, 105, 31, 0.884);
     margin-left: 1.5rem;

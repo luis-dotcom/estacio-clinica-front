@@ -49,6 +49,7 @@ import { UsuarioCreateComponent } from './components/views/admin-views/usuario/u
 import { UsuarioDeleteComponent } from './components/views/admin-views/usuario/usuario-delete/usuario-delete.component';
 import { UsuarioReadComponent } from './components/views/admin-views/usuario/usuario-read/usuario-read.component';
 import { UsuarioUpdateComponent } from './components/views/admin-views/usuario/usuario-update/usuario-update.component';
+import { CreditosComponent } from './components/views/creditos/creditos.component';
 
 
 const routes: Routes = [
@@ -102,6 +103,7 @@ const routes: Routes = [
   { path: "professor/especialidade/create" , component: ProfessorEspecialidadeCreateComponent, canActivate: [CanActiveGuard] },
   { path: "especialidade/delete/:id" , component: EspecialidadDeleteComponent, canActivate: [CanActiveGuard] },
   { path: "professor/especialidade/delete/:id" , component: ProfessorEspecialidadeDeleteComponent, canActivate: [CanActiveGuard] },
+  { path: "creditos" , component: CreditosComponent },
   { path: '**', component: LoginComponent }
 
 ];

@@ -8,4 +8,10 @@
   background-image: linear-gradient(
     100deg, rgb(32, 177, 187), rgb(32, 187, 135)
   );
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
