@@ -34,6 +34,7 @@ export class RecepcaoCreateAgendaComponent implements OnInit{
     cpf: '',
     especialidade: '',
     nomeAluno: '',
+    presenca: false
   };
 
   selects: Especialidade[] = [];

@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Aluno } from 'src/app/components/models/aluno.modelo';
-import { AlunoService } from 'src/app/components/services/service.service';
+import { AlunoService } from 'src/app/components/services/aluno.service';
 
 
 @Component({

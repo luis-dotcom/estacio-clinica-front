@@ -24,8 +24,17 @@ export class UsuarioService {
   public buscarPorId(id: String): Observable<Usuario>{
     return this.http.get<Usuario>("http://localhost:8086/usuario/"+id);
   }
+
+  public validarSenha(email: string, senha: string): Observable<Usuario>{
+    return this.http.get<Usuario>("http://localhost:8086/usuario/validarSenha?email="+email+"&senha="+senha);
+  }
+
   public buscarPorEmail(email: String): Observable<Usuario>{
     return this.http.get<Usuario>("http://localhost:8086/usuario/email/"+email);
+  }
+
+  public listarUsuarioAlunoPorCurso(curso: String): Observable<Usuario>{
+    return this.http.get<Usuario>("http://localhost:8086/usuario/curso/"+curso);
   }
 
   public deleteUsuarioService(id: String): Observable<any>{

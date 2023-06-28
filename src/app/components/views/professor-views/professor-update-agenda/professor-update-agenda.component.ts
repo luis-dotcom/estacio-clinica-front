@@ -5,15 +5,14 @@ import { Aluno } from 'src/app/components/models/aluno.modelo';
 import { Especialidade } from 'src/app/components/models/especialidade.modelo';
 import { AgendaService } from 'src/app/components/services/agenda.service';
 import { EspecialidadeService } from 'src/app/components/services/especialidade.service';
-import { AlunoService } from 'src/app/components/services/service.service';
+import { AlunoService } from 'src/app/components/services/aluno.service';
 
 @Component({
   selector: 'app-professor-update-agenda',
   templateUrl: './professor-update-agenda.component.html',
-  styleUrls: ['./professor-update-agenda.component.css']
+  styleUrls: ['./professor-update-agenda.component.css'],
 })
-export class ProfessorUpdateAgendaComponent implements OnInit{
-
+export class ProfessorUpdateAgendaComponent implements OnInit {
   agenda: Agenda = {
     nome: '',
     data: '',
@@ -21,11 +20,13 @@ export class ProfessorUpdateAgendaComponent implements OnInit{
     cpf: '',
     especialidade: '',
     nomeAluno: '',
+    presenca: false
   };
 
   especialidades: Especialidade[] = [];
   alunos: Aluno[] = [];
   atividadeFixa!: boolean;
+  curso!: String;
 
   constructor(
     private service: AgendaService,
@@ -49,6 +50,10 @@ export class ProfessorUpdateAgendaComponent implements OnInit{
       this.agenda.cpf = resposta.cpf;
       this.agenda.especialidade = resposta.especialidade;
       this.agenda.nomeAluno = resposta.nomeAluno;
+      this.curso = resposta.especialidade;
+      this.serviceAluno.listarAlunoPorCurso(this.curso).subscribe((resposta) => {
+        this.alunos = resposta;
+      });
     });
   }
 
@@ -70,12 +75,9 @@ export class ProfessorUpdateAgendaComponent implements OnInit{
     this.serviceEsp.listarEspecialidadesService().subscribe((resposta) => {
       this.especialidades = resposta;
     });
-    this.serviceAluno.listarAlunosService().subscribe((resposta) => {
-      this.alunos = resposta;
-    });
   }
 
   public navegarParaAgenda() {
-    this.router.navigate(['agenda']);
+    this.router.navigate(['professor/agenda']);
   }
 }

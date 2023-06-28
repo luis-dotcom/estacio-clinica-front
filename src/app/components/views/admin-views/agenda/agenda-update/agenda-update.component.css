@@ -16,6 +16,10 @@ h1 {
   font-family: Poppins,sans-serif;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 form {
   margin-top: 2em;
   margin-left: 20rem;

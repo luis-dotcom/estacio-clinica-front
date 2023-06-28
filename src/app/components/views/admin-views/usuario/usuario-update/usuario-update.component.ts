@@ -28,7 +28,7 @@ export class UsuarioUpdateComponent implements OnInit{
     };
 
   tipos: TipoPerfil[] = [
-    {valor: 'ALUNO', viewValor: 'ALUNO'},
+    {valor: 'ADMINISTRADOR', viewValor: 'ADMINISTRADOR'},
     {valor: 'PROFESSOR', viewValor: 'PROFESSOR'},
     {valor: 'RECEPCIONISTA', viewValor: 'RECEPCIONISTA'},
   ];

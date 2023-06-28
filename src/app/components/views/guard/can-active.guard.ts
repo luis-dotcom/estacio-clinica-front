@@ -17,7 +17,8 @@ export class CanActiveGuard implements CanActivate {
     if (this.service.usuario != null){
       return true;
     } else {
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login']);
+      this.service.mensagem('Sessão Expirada! Favor realizar novo Login.');
       return false;
     }
   }

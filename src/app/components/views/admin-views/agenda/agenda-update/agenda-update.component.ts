@@ -5,7 +5,7 @@ import { Aluno } from "src/app/components/models/aluno.modelo";
 import { Especialidade } from "src/app/components/models/especialidade.modelo";
 import { AgendaService } from "src/app/components/services/agenda.service";
 import { EspecialidadeService } from "src/app/components/services/especialidade.service";
-import { AlunoService } from "src/app/components/services/service.service";
+import { AlunoService } from "src/app/components/services/aluno.service";
 
 
 @Component({
@@ -21,11 +21,13 @@ export class AgendaUpdateComponent implements OnInit {
     cpf: '',
     especialidade: '',
     nomeAluno: '',
+    presenca: false
   };
 
   especialidades: Especialidade[] = [];
   alunos: Aluno[] = [];
   atividadeFixa!: boolean;
+  curso!: String;
 
   constructor(
     private service: AgendaService,
@@ -49,6 +51,10 @@ export class AgendaUpdateComponent implements OnInit {
       this.agenda.cpf = resposta.cpf;
       this.agenda.especialidade = resposta.especialidade;
       this.agenda.nomeAluno = resposta.nomeAluno;
+      this.curso = resposta.especialidade;
+      this.serviceAluno.listarAlunoPorCurso(this.curso).subscribe((resposta) => {
+        this.alunos = resposta;
+      });
     });
   }
 
@@ -69,9 +75,6 @@ export class AgendaUpdateComponent implements OnInit {
   public listarSelects() {
     this.serviceEsp.listarEspecialidadesService().subscribe((resposta) => {
       this.especialidades = resposta;
-    });
-    this.serviceAluno.listarAlunosService().subscribe((resposta) => {
-      this.alunos = resposta;
     });
   }
 
